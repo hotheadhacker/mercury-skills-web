@@ -16,7 +16,10 @@ import SkillViewTracker from "@/components/skill/SkillViewTracker";
 import InstallTabs from "@/components/skill/InstallTabs";
 import SkillCard from "@/components/skill/SkillCard";
 
-export const revalidate = 120;
+// Skill detail pages show live like/download counts and the related-skills
+// rail, both of which depend on Redis state. Render dynamically so they
+// always reflect the latest counts the user just produced via clicking like.
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   return listSkillIds().map((id) => ({ slug: id.split("/") }));

@@ -5,7 +5,10 @@ import SkillCard from "@/components/skill/SkillCard";
 import SearchBox from "@/components/search/SearchBox";
 import { ArrowRight, Sparkles, TrendingUp, Layers } from "lucide-react";
 
-export const revalidate = 60;
+// Render fresh on every request so newly-liked/downloaded skills show up
+// immediately in Trending. Stats are pulled from Upstash via getStatsMap()
+// in a single mget; same-region latency is sub-5ms.
+export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const allSkills = getAllSkills();

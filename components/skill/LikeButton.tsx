@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import { Heart } from "lucide-react";
 import { track } from "@/lib/analytics";
 
@@ -13,6 +14,7 @@ export default function LikeButton({
   initial: number;
   category?: string;
 }) {
+  const router = useRouter();
   const [count, setCount] = useState(initial);
   const [liked, setLiked] = useState(false);
   const [pending, startTransition] = useTransition();
@@ -28,6 +30,9 @@ export default function LikeButton({
         if (res.ok) {
           const data = await res.json();
           if (typeof data.likes === "number") setCount(data.likes);
+          // Invalidate the surrounding RSC tree so SkillCards on the same page
+          // (related rail, trending grid) re-render with the new count.
+          router.refresh();
         }
       } catch {
         // ignore, optimistic stays

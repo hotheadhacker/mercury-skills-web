@@ -3,7 +3,9 @@ import { getAllSkills } from "@/lib/skills";
 import { getStatsMap } from "@/lib/stats";
 import { Trophy, Heart, Download } from "lucide-react";
 
-export const revalidate = 60;
+// Leaderboard must reflect the latest counts on every visit; static caching
+// would freeze rankings between revalidations and defeat the page's purpose.
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Leaderboard",

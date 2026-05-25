@@ -4,7 +4,11 @@ import { getCategory, getSkillsByCategory, getAllCategories } from "@/lib/skills
 import { getStatsMap } from "@/lib/stats";
 import SkillCard from "@/components/skill/SkillCard";
 
-export const revalidate = 120;
+// Category pages render skill cards with live like/download badges, so they
+// must read fresh stats on every request. `generateStaticParams` is retained
+// for the metadata pipeline (sitemap, prefetch hints) but Next 16 still
+// renders dynamically when `dynamic = "force-dynamic"` is set.
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   return getAllCategories().map((c) => ({ slug: c.slug }));
