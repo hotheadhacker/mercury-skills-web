@@ -1,8 +1,9 @@
 node_modules
 .next
 *.tsbuildinfo
-# Skills content is synced from main by the GitHub Action; not committed here.
-/categories/
+# Skill content (categories/) is vendored into this repo - see
+# scripts/build-skills.ts for the build pipeline. To re-sync from upstream,
+# run `npm run sync:skills` (TODO) or delete categories/ and re-hydrate.
 
 out
 .vercel
