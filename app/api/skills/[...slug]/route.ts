@@ -11,6 +11,13 @@ export const dynamic = "force-dynamic";
 
 const ACTIONS = new Set(["like", "download", "install"]);
 
+// Anything matching this is treated as a "real" install from a client that
+// fetched the skill in order to install it locally (Mercury CLI, the web
+// dashboard's install-from-registry handler, the Telegram bot, etc.).
+// Casual browsers hitting the JSON detail route from the website use the
+// default browser UA and are intentionally excluded.
+const CLIENT_UA = /^mercury-cli\//i;
+
 function parseSlug(slug: string[]): { id: string; action: string | null } {
   if (slug.length >= 2 && ACTIONS.has(slug[slug.length - 1])) {
     return {
@@ -22,7 +29,7 @@ function parseSlug(slug: string[]): { id: string; action: string | null } {
 }
 
 export async function GET(
-  _req: Request,
+  req: Request,
   { params }: { params: Promise<{ slug: string[] }> }
 ) {
   const { slug } = await params;
@@ -31,7 +38,8 @@ export async function GET(
   if (!skill) return NextResponse.json({ error: "not found", id }, { status: 404 });
 
   if (action === "install") {
-    // increment download count, return tarball
+    // Tarball endpoint - always counts as an install regardless of UA, since
+    // the only reason to fetch the .tar.gz is to install.
     await storage().incrementDownload(id);
     const body = getSkillBody(id);
     const tar = await buildTarball(skill, body);
@@ -44,9 +52,16 @@ export async function GET(
     });
   }
 
-  // default: detail JSON
+  // Default: detail JSON. The Mercury CLI (and other first-party clients)
+  // use this endpoint to fetch SKILL.md content for local install - they
+  // reconstruct the file from frontmatter + body, avoiding a tar parser.
+  // Recognise those clients via user-agent and increment downloads here too.
   const body = getSkillBody(id);
-  const stats = await storage().get(id);
+  const ua = req.headers.get("user-agent") ?? "";
+  const isInstallClient = CLIENT_UA.test(ua);
+  const stats = isInstallClient
+    ? { ...(await storage().get(id)), downloads: await storage().incrementDownload(id) }
+    : await storage().get(id);
   const sha = createHash("sha256").update(body).digest("hex").slice(0, 16);
 
   return NextResponse.json({
