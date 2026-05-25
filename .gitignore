@@ -1,0 +1,14 @@
+node_modules
+.next
+# Skills content is synced from main by the GitHub Action; not committed here.
+/categories/
+
+out
+.vercel
+.env*.local
+.DS_Store
+*.log
+data/stats.local.json
+content/skills/
+content/tarballs/
+.turbo

@@ -1,0 +1,42 @@
+"use client";
+
+import { useState, useTransition } from "react";
+import { Heart } from "lucide-react";
+
+export default function LikeButton({ id, initial }: { id: string; initial: number }) {
+  const [count, setCount] = useState(initial);
+  const [liked, setLiked] = useState(false);
+  const [pending, startTransition] = useTransition();
+
+  function onClick() {
+    if (liked || pending) return;
+    setLiked(true);
+    setCount((c) => c + 1);
+    startTransition(async () => {
+      try {
+        const res = await fetch(`/api/skills/${id}/like`, { method: "POST" });
+        if (res.ok) {
+          const data = await res.json();
+          if (typeof data.likes === "number") setCount(data.likes);
+        }
+      } catch {
+        // ignore, optimistic stays
+      }
+    });
+  }
+
+  return (
+    <button
+      onClick={onClick}
+      disabled={liked}
+      className={`inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-md border transition-colors ${
+        liked
+          ? "border-[color:var(--color-brand)] text-[color:var(--color-brand)] bg-[color:var(--color-brand)]/10"
+          : "border-[color:var(--color-border)] hover:border-[color:var(--color-border-strong)] hover:bg-[color:var(--color-bg-elev)]"
+      }`}
+    >
+      <Heart className={`w-3.5 h-3.5 ${liked ? "fill-current" : ""}`} />
+      <span>{count}</span>
+    </button>
+  );
+}

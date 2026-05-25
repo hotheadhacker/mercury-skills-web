@@ -1,0 +1,43 @@
+name: Sync skills to web-platform
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "categories/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          path: main
+
+      - name: Checkout web-platform
+        uses: actions/checkout@v4
+        with:
+          ref: web-platform
+          path: web
+
+      - name: Mirror categories/ from main → web-platform
+        run: |
+          rm -rf web/categories
+          cp -R main/categories web/categories
+          cd web
+          if git diff --quiet -- categories; then
+            echo "No content changes; skipping commit."
+            exit 0
+          fi
+          git config user.name "mercury-skills-bot"
+          git config user.email "bot@mercuryagent.sh"
+          git add categories
+          git commit -m "chore: sync skills from main @ ${GITHUB_SHA::7}"
+          git push origin web-platform
