@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Copy, ExternalLink } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Check, Copy, ExternalLink, Terminal, Zap } from "lucide-react";
 
 type AgentKey = "mercury" | "claude" | "codex" | "openclaw" | "hermes" | "other";
 
@@ -11,43 +12,169 @@ const REPO_BASE =
   "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories";
 
 interface Props {
-  skillId: string; // e.g. "ai-ml/agent-audit-logging"
-  skillName: string; // e.g. "agent-audit-logging"
-  pageUrl: string; // canonical site URL for this skill
+  skillId: string;
+  skillName: string;
+  pageUrl: string;
 }
 
 interface Tab {
   key: AgentKey;
   label: string;
-  badge?: string;
+  /** Single character "lockup" — keeps the tab strip dense and recognizable. */
+  glyph: string;
 }
 
 const TABS: Tab[] = [
-  { key: "mercury", label: "Mercury", badge: "Default" },
-  { key: "claude", label: "Claude Code" },
-  { key: "codex", label: "Codex" },
-  { key: "openclaw", label: "OpenClaw" },
-  { key: "hermes", label: "Hermes" },
-  { key: "other", label: "Other" },
+  { key: "mercury", label: "Mercury", glyph: "M" },
+  { key: "claude", label: "Claude Code", glyph: "C" },
+  { key: "codex", label: "Codex", glyph: "X" },
+  { key: "openclaw", label: "OpenClaw", glyph: "O" },
+  { key: "hermes", label: "Hermes", glyph: "H" },
+  { key: "other", label: "Other", glyph: "•" },
 ];
 
-export default function InstallTabs({ skillId, skillName, pageUrl }: Props) {
-  const [active, setActive] = useState<AgentKey>("mercury");
+interface Step {
+  title: string;
+  command?: string;
+  multiline?: boolean;
+  hint?: React.ReactNode;
+}
+
+function buildSteps(active: AgentKey, ctx: { skillId: string; skillName: string; pageUrl: string }): Step[] {
+  const { skillId, skillName, pageUrl } = ctx;
   const rawUrl = `${RAW_BASE}/${skillId}/SKILL.md`;
   const repoUrl = `${REPO_BASE}/${skillId}`;
 
+  switch (active) {
+    case "mercury":
+      return [
+        {
+          title: "Install with the Mercury CLI",
+          command: `mercury skills install ${skillId}`,
+          hint: (
+            <>
+              Lands in <Code>~/.mercury/skills/</Code>. Requires the{" "}
+              <Inline href="https://github.com/cosmicstack-labs/mercury-agent-skills">
+                Mercury CLI
+              </Inline>
+              .
+            </>
+          ),
+        },
+      ];
+    case "claude":
+      return [
+        {
+          title: "Create the skill folder",
+          command: `mkdir -p ~/.claude/skills/${skillName}`,
+        },
+        {
+          title: "Download the SKILL.md",
+          command: `curl -fsSL ${rawUrl} \\\n  -o ~/.claude/skills/${skillName}/SKILL.md`,
+          multiline: true,
+        },
+        {
+          title: "Restart Claude Code",
+          hint: (
+            <>
+              <Inline href="https://docs.claude.com/en/docs/claude-code/overview">
+                Claude Code
+              </Inline>{" "}
+              auto-discovers skills in <Code>~/.claude/skills/</Code> on launch.
+            </>
+          ),
+        },
+      ];
+    case "codex":
+      return [
+        {
+          title: "Append the skill to your Codex instructions",
+          command: `curl -fsSL ${rawUrl} >> ~/.codex/AGENTS.md`,
+        },
+        {
+          title: "Or reference it inline in chat",
+          hint: (
+            <>
+              Paste the skill page URL into a Codex session and it will fetch the
+              context on demand.
+              <LinkRow href={pageUrl} label="Skill page" />
+            </>
+          ),
+        },
+      ];
+    case "openclaw":
+      return [
+        {
+          title: "Create the skill folder",
+          command: `mkdir -p ~/.openclaw/skills/${skillName}`,
+        },
+        {
+          title: "Download the SKILL.md",
+          command: `curl -fsSL ${rawUrl} \\\n  -o ~/.openclaw/skills/${skillName}/SKILL.md`,
+          multiline: true,
+        },
+        {
+          title: "Reload your OpenClaw session",
+          hint: <>The skill registers on the next agent restart.</>,
+        },
+      ];
+    case "hermes":
+      return [
+        {
+          title: "Download the SKILL.md",
+          command: `curl -fsSL ${rawUrl} -o ./skills/${skillName}.md`,
+        },
+        {
+          title: "Load it as system-prompt context",
+          hint: (
+            <>
+              Hermes (Nous Research) is a model family — feed the file to your
+              inference harness, e.g. <Code>llama.cpp --system-prompt-file</Code>{" "}
+              or an Ollama <Code>Modelfile</Code>.
+            </>
+          ),
+        },
+      ];
+    case "other":
+      return [
+        {
+          title: "Fetch the raw skill",
+          command: `curl -fsSL ${rawUrl}`,
+        },
+        {
+          title: "Or point your agent at a URL",
+          hint: (
+            <>
+              Every skill is a single <Code>SKILL.md</Code> file. Pick whichever
+              URL your agent prefers:
+              <div className="grid gap-1.5 pt-2">
+                <LinkRow href={pageUrl} label="Skill page" />
+                <LinkRow href={rawUrl} label="Raw SKILL.md" />
+                <LinkRow href={repoUrl} label="Source on GitHub" />
+              </div>
+            </>
+          ),
+        },
+      ];
+  }
+}
+
+export default function InstallTabs({ skillId, skillName, pageUrl }: Props) {
+  const [active, setActive] = useState<AgentKey>("mercury");
+  const steps = buildSteps(active, { skillId, skillName, pageUrl });
+
   return (
     <div className="space-y-3">
-      <div className="text-[11px] uppercase font-mono tracking-wider text-[color:var(--color-fg-subtle)]">
+      <div className="flex items-center gap-2 text-[11px] uppercase font-mono tracking-wider text-[color:var(--color-fg-subtle)]">
+        <Terminal className="w-3.5 h-3.5" />
         Install
       </div>
 
-      {/* Tab strip — underlined active tab in brand color, muted inactives.
-          Only one tab is "active" at a time (mutually exclusive). */}
+      {/* Tab strip — sliding brand-color indicator behind the active tab. */}
       <div
         role="tablist"
         aria-label="Install instructions per agent"
-        className="flex flex-wrap items-center gap-x-1 gap-y-0 border-b border-[color:var(--color-border)] -mx-0.5"
+        className="relative flex flex-wrap items-center gap-0.5 p-1 rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-bg-elev)]"
       >
         {TABS.map((t) => {
           const isActive = t.key === active;
@@ -56,194 +183,117 @@ export default function InstallTabs({ skillId, skillName, pageUrl }: Props) {
               key={t.key}
               role="tab"
               aria-selected={isActive}
-              aria-controls={`install-panel-${t.key}`}
+              aria-controls="install-panel"
               id={`install-tab-${t.key}`}
               tabIndex={isActive ? 0 : -1}
               onClick={() => setActive(t.key)}
-              className={`relative text-xs px-2.5 py-2 -mb-px border-b-2 transition-colors ${
+              onKeyDown={(e) => {
+                if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+                  e.preventDefault();
+                  const i = TABS.findIndex((x) => x.key === active);
+                  const next =
+                    e.key === "ArrowRight"
+                      ? TABS[(i + 1) % TABS.length]
+                      : TABS[(i - 1 + TABS.length) % TABS.length];
+                  setActive(next.key);
+                }
+              }}
+              className={`relative z-10 flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs transition-colors ${
                 isActive
-                  ? "text-[color:var(--color-brand)] border-[color:var(--color-brand)] font-medium"
-                  : "text-[color:var(--color-fg-muted)] border-transparent hover:text-[color:var(--color-fg)]"
+                  ? "text-[color:var(--color-brand)] font-medium"
+                  : "text-[color:var(--color-fg-muted)] hover:text-[color:var(--color-fg)]"
               }`}
             >
-              {t.label}
+              {isActive && (
+                <motion.span
+                  layoutId="install-tab-indicator"
+                  className="absolute inset-0 rounded-md bg-[color:var(--color-brand)]/10 border border-[color:var(--color-brand)]/40"
+                  transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                  aria-hidden
+                />
+              )}
+              <span className="relative font-mono text-[10px] w-3.5 text-center opacity-70">
+                {t.glyph}
+              </span>
+              <span className="relative">{t.label}</span>
             </button>
           );
         })}
       </div>
 
-      {/* Panels */}
+      {/* Animated panel swap */}
       <div
         role="tabpanel"
-        id={`install-panel-${active}`}
+        id="install-panel"
         aria-labelledby={`install-tab-${active}`}
-        className="space-y-3"
+        className="relative"
       >
-        {active === "mercury" && (
-          <MercuryPanel skillId={skillId} />
-        )}
-        {active === "claude" && (
-          <ClaudePanel skillName={skillName} rawUrl={rawUrl} />
-        )}
-        {active === "codex" && (
-          <CodexPanel skillName={skillName} rawUrl={rawUrl} pageUrl={pageUrl} />
-        )}
-        {active === "openclaw" && (
-          <OpenClawPanel skillName={skillName} rawUrl={rawUrl} />
-        )}
-        {active === "hermes" && (
-          <HermesPanel skillName={skillName} rawUrl={rawUrl} />
-        )}
-        {active === "other" && (
-          <OtherPanel rawUrl={rawUrl} pageUrl={pageUrl} repoUrl={repoUrl} />
-        )}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -4 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
+            className="space-y-2.5"
+          >
+            {steps.map((step, i) => (
+              <StepRow key={i} index={i + 1} step={step} total={steps.length} />
+            ))}
+            <FooterMeta active={active} />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
 }
 
-/* ---------- Panels ---------- */
+/* ---------- Step row ---------- */
 
-function MercuryPanel({ skillId }: { skillId: string }) {
-  return (
-    <>
-      <CommandBlock command={`mercury skills install ${skillId}`} />
-      <Hint>
-        Requires the{" "}
-        <a
-          href="https://github.com/cosmicstack-labs/mercury-agent-skills"
-          target="_blank"
-          rel="noreferrer"
-          className="underline hover:opacity-80"
-        >
-          Mercury CLI
-        </a>
-        . Skills land in <Code>~/.mercury/skills/</Code>.
-      </Hint>
-    </>
-  );
-}
-
-function ClaudePanel({ skillName, rawUrl }: { skillName: string; rawUrl: string }) {
-  // Claude Code reads project-level CLAUDE.md and user-level skills from
-  // ~/.claude/skills/<name>/SKILL.md. We mirror the SKILL.md into that path.
-  const cmd = `mkdir -p ~/.claude/skills/${skillName} && \\\n  curl -fsSL ${rawUrl} -o ~/.claude/skills/${skillName}/SKILL.md`;
-  return (
-    <>
-      <CommandBlock command={cmd} multiline />
-      <Hint>
-        Installs the skill into <Code>~/.claude/skills/</Code> where{" "}
-        <a
-          href="https://docs.claude.com/en/docs/claude-code/overview"
-          target="_blank"
-          rel="noreferrer"
-          className="underline hover:opacity-80"
-        >
-          Claude Code
-        </a>{" "}
-        auto-discovers it on next launch.
-      </Hint>
-    </>
-  );
-}
-
-function CodexPanel({
-  skillName,
-  rawUrl,
-  pageUrl,
+function StepRow({
+  index,
+  step,
+  total,
 }: {
-  skillName: string;
-  rawUrl: string;
-  pageUrl: string;
+  index: number;
+  step: Step;
+  total: number;
 }) {
-  // OpenAI Codex CLI uses ~/.codex/AGENTS.md for instructions and supports
-  // per-project AGENTS.md. We append the skill as a section.
-  const cmd = `curl -fsSL ${rawUrl} >> ~/.codex/AGENTS.md`;
+  const single = total === 1;
   return (
-    <>
-      <CommandBlock command={cmd} />
-      <Hint>
-        Appends the skill to your global{" "}
-        <a
-          href="https://github.com/openai/codex"
-          target="_blank"
-          rel="noreferrer"
-          className="underline hover:opacity-80"
-        >
-          Codex CLI
-        </a>{" "}
-        instructions at <Code>~/.codex/AGENTS.md</Code>. Or reference it directly
-        in a chat: paste the page URL.
-      </Hint>
-      <LinkRow href={pageUrl} label="Skill page" />
-    </>
-  );
-}
-
-function OpenClawPanel({
-  skillName,
-  rawUrl,
-}: {
-  skillName: string;
-  rawUrl: string;
-}) {
-  const cmd = `mkdir -p ~/.openclaw/skills/${skillName} && \\\n  curl -fsSL ${rawUrl} -o ~/.openclaw/skills/${skillName}/SKILL.md`;
-  return (
-    <>
-      <CommandBlock command={cmd} multiline />
-      <Hint>
-        Drops the skill into <Code>~/.openclaw/skills/</Code>. Restart your
-        OpenClaw session for it to register.
-      </Hint>
-    </>
-  );
-}
-
-function HermesPanel({
-  skillName,
-  rawUrl,
-}: {
-  skillName: string;
-  rawUrl: string;
-}) {
-  // Hermes (Nous Research) is a model family. Pattern: fetch SKILL.md and
-  // prepend it to the system prompt for a given session/project.
-  const cmd = `curl -fsSL ${rawUrl} -o ./skills/${skillName}.md`;
-  return (
-    <>
-      <CommandBlock command={cmd} />
-      <Hint>
-        Hermes models (Nous Research) consume skills as system-prompt context.
-        Download the SKILL.md and prepend it to your system prompt, or load it
-        through your inference harness (e.g. Ollama Modelfile, llama.cpp{" "}
-        <Code>--system-prompt-file</Code>).
-      </Hint>
-    </>
-  );
-}
-
-function OtherPanel({
-  rawUrl,
-  pageUrl,
-  repoUrl,
-}: {
-  rawUrl: string;
-  pageUrl: string;
-  repoUrl: string;
-}) {
-  return (
-    <>
-      <CommandBlock command={`curl -fsSL ${rawUrl}`} />
-      <Hint>
-        Every skill is a single <Code>SKILL.md</Code> file. Point your agent at
-        one of the URLs below, or pipe the file straight into its system prompt.
-      </Hint>
-      <div className="grid gap-1.5 pt-1">
-        <LinkRow href={pageUrl} label="Skill page" />
-        <LinkRow href={rawUrl} label="Raw SKILL.md" />
-        <LinkRow href={repoUrl} label="Source on GitHub" />
+    <div className="space-y-1.5">
+      <div className="flex items-start gap-2">
+        {!single && (
+          <span
+            className="mt-0.5 inline-flex items-center justify-center shrink-0 w-5 h-5 rounded-full bg-[color:var(--color-bg-elev)] border border-[color:var(--color-border)] text-[10px] font-mono text-[color:var(--color-fg-muted)]"
+            aria-hidden
+          >
+            {index}
+          </span>
+        )}
+        <div className="text-xs text-[color:var(--color-fg)] leading-snug pt-0.5">
+          {step.title}
+        </div>
       </div>
-    </>
+      {step.command && (
+        <CommandBlock command={step.command} multiline={step.multiline} />
+      )}
+      {step.hint && (
+        <div className="text-[11.5px] text-[color:var(--color-fg-subtle)] leading-relaxed pl-0">
+          {step.hint}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function FooterMeta({ active }: { active: AgentKey }) {
+  if (active !== "mercury") return null;
+  return (
+    <div className="flex items-center gap-1.5 pt-1 text-[11px] text-[color:var(--color-fg-subtle)]">
+      <Zap className="w-3 h-3 text-[color:var(--color-brand)]" />
+      Default installer for Mercury Skills.
+    </div>
   );
 }
 
@@ -269,29 +319,47 @@ function CommandBlock({
   return (
     <button
       onClick={copy}
-      className="group w-full flex items-start justify-between gap-2 px-3 py-2.5 rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-bg-elev)] hover:border-[color:var(--color-border-strong)] font-mono text-xs text-left"
+      className={`group relative w-full flex items-start justify-between gap-2 px-3 py-2.5 rounded-md border bg-[color:var(--color-bg-elev)] font-mono text-xs text-left transition-colors ${
+        copied
+          ? "border-[color:var(--color-success)]/60"
+          : "border-[color:var(--color-border)] hover:border-[color:var(--color-border-strong)]"
+      }`}
     >
       <code
         className={`text-[color:var(--color-fg)] ${
           multiline ? "whitespace-pre-wrap break-all" : "truncate"
         }`}
       >
-        $ {command}
+        <span className="text-[color:var(--color-fg-subtle)] mr-1.5 select-none">$</span>
+        {command}
       </code>
-      {copied ? (
-        <Check className="w-3.5 h-3.5 text-[color:var(--color-success)] shrink-0 mt-0.5" />
-      ) : (
-        <Copy className="w-3.5 h-3.5 text-[color:var(--color-fg-subtle)] group-hover:text-[color:var(--color-fg)] shrink-0 mt-0.5" />
-      )}
+      <AnimatePresence mode="wait" initial={false}>
+        {copied ? (
+          <motion.span
+            key="check"
+            initial={{ scale: 0.6, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.6, opacity: 0 }}
+            transition={{ duration: 0.15 }}
+            className="shrink-0 mt-0.5"
+            aria-label="Copied"
+          >
+            <Check className="w-3.5 h-3.5 text-[color:var(--color-success)]" />
+          </motion.span>
+        ) : (
+          <motion.span
+            key="copy"
+            initial={{ scale: 0.6, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.6, opacity: 0 }}
+            transition={{ duration: 0.15 }}
+            className="shrink-0 mt-0.5"
+          >
+            <Copy className="w-3.5 h-3.5 text-[color:var(--color-fg-subtle)] group-hover:text-[color:var(--color-fg)]" />
+          </motion.span>
+        )}
+      </AnimatePresence>
     </button>
-  );
-}
-
-function Hint({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="text-xs text-[color:var(--color-fg-subtle)] leading-relaxed">
-      {children}
-    </p>
   );
 }
 
@@ -303,16 +371,29 @@ function Code({ children }: { children: React.ReactNode }) {
   );
 }
 
+function Inline({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="underline underline-offset-2 hover:opacity-80 text-[color:var(--color-fg-muted)]"
+    >
+      {children}
+    </a>
+  );
+}
+
 function LinkRow({ href, label }: { href: string; label: string }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="group flex items-center justify-between gap-2 text-xs text-[color:var(--color-fg-muted)] hover:text-[color:var(--color-fg)] px-2 py-1.5 rounded-md border border-[color:var(--color-border)] hover:border-[color:var(--color-border-strong)] bg-[color:var(--color-bg-elev)]"
+      className="group flex items-center justify-between gap-2 text-xs text-[color:var(--color-fg-muted)] hover:text-[color:var(--color-fg)] px-2.5 py-1.5 rounded-md border border-[color:var(--color-border)] hover:border-[color:var(--color-border-strong)] bg-[color:var(--color-bg-elev)] transition-colors"
     >
       <span>{label}</span>
-      <ExternalLink className="w-3 h-3 opacity-60 group-hover:opacity-100" />
+      <ExternalLink className="w-3 h-3 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
     </a>
   );
 }
