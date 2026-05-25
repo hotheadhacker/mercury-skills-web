@@ -1,43 +1,97 @@
-name: Sync skills to web-platform
+name: Sync skills from upstream
+
+# Pulls the latest categories/ from cosmicstack-labs/mercury-agent-skills@main
+# into this fork's web-platform branch. The resulting push triggers Vercel's
+# auto-deploy, so newly contributed skills appear on skills.mercuryagent.sh
+# without any manual intervention.
+#
+# Triggers:
+#   - Cron: every hour at :17 (offset to avoid the top-of-hour rush)
+#   - Manual: workflow_dispatch button in the Actions tab
+#
+# Why pull-based and not push-based?
+#   The upstream org repo doesn't know about this fork; we own the side that
+#   knows what to do, so we own the schedule. No PAT or secret-sharing across
+#   organizations required.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "categories/**"
+  schedule:
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: sync-skills
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-          path: main
-
-      - name: Checkout web-platform
+      - name: Checkout web-platform (this fork)
         uses: actions/checkout@v4
         with:
           ref: web-platform
-          path: web
+          # Need full history so the commit we push has a real parent chain.
+          fetch-depth: 0
 
-      - name: Mirror categories/ from main → web-platform
+      - name: Sparse-clone upstream categories/
         run: |
-          rm -rf web/categories
-          cp -R main/categories web/categories
-          cd web
+          set -euo pipefail
+          git clone \
+            --depth 1 \
+            --filter=blob:none \
+            --sparse \
+            https://github.com/cosmicstack-labs/mercury-agent-skills.git \
+            upstream
+          cd upstream
+          git sparse-checkout set categories
+          UPSTREAM_SHA=$(git rev-parse --short HEAD)
+          echo "UPSTREAM_SHA=$UPSTREAM_SHA" >> "$GITHUB_ENV"
+          echo "Upstream HEAD: $UPSTREAM_SHA"
+
+      - name: Mirror categories/ (rsync with --delete)
+        run: |
+          # --delete removes locally-tracked files that no longer exist
+          # upstream, so a skill removal upstream propagates correctly.
+          rsync -a --delete \
+            --exclude='.git' \
+            upstream/categories/ categories/
+
+      - name: Check for changes
+        id: diff
+        run: |
           if git diff --quiet -- categories; then
-            echo "No content changes; skipping commit."
-            exit 0
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No category changes; nothing to sync."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat -- categories | head -20
           fi
-          git config user.name "mercury-skills-bot"
-          git config user.email "bot@mercuryagent.sh"
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "mercury-skills-sync[bot]"
+          git config user.email "mercury-skills-sync@users.noreply.github.com"
           git add categories
-          git commit -m "chore: sync skills from main @ ${GITHUB_SHA::7}"
+          git commit -m "chore: sync skills from upstream @ ${UPSTREAM_SHA}
+
+Synced from cosmicstack-labs/mercury-agent-skills@${UPSTREAM_SHA}
+by the hourly sync workflow."
           git push origin web-platform
+
+      - name: Summary
+        run: |
+          if [ "${{ steps.diff.outputs.changed }}" = "true" ]; then
+            echo "### Synced new skills from upstream @ \`${UPSTREAM_SHA}\`" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "Vercel will pick up the push and redeploy automatically." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "### No changes" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "Upstream HEAD \`${UPSTREAM_SHA}\` matches what we already have." >> "$GITHUB_STEP_SUMMARY"
+          fi
