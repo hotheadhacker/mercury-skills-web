@@ -7,7 +7,7 @@ name: Sync skills from upstream
 #
 # Triggers:
 #   - Cron: every hour at :17 (offset to avoid the top-of-hour rush)
-#   - Manual: workflow_dispatch button in the Actions tab
+#   - Manual: workflow_dispatch button in the Actions tab (or `gh workflow run`)
 #
 # Why pull-based and not push-based?
 #   The upstream org repo doesn't know about this fork; we own the side that
