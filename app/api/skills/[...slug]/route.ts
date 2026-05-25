@@ -4,7 +4,10 @@ import { getSkillById, getSkillBody } from "@/lib/skills";
 import { storage } from "@/lib/storage";
 import { buildTarball } from "@/lib/tarball";
 
-export const revalidate = 60;
+// Must be dynamic: GET ?action=install has a side-effect (incrementDownload),
+// and stats reads must always reflect the latest Redis value. Static caching
+// (revalidate / force-static) would freeze counters and skip the increment.
+export const dynamic = "force-dynamic";
 
 const ACTIONS = new Set(["like", "download", "install"]);
 
@@ -36,7 +39,7 @@ export async function GET(
       headers: {
         "Content-Type": "application/gzip",
         "Content-Disposition": `attachment; filename="${id.replace(/\//g, "_")}.tar.gz"`,
-        "Cache-Control": "public, max-age=60",
+        "Cache-Control": "no-store",
       },
     });
   }
