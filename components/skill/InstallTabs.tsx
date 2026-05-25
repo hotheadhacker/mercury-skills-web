@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, Copy, ExternalLink, Terminal, Zap } from "lucide-react";
+import { track } from "@/lib/analytics";
 
 type AgentKey = "mercury" | "claude" | "codex" | "openclaw" | "hermes" | "other";
 
@@ -161,6 +162,15 @@ export default function InstallTabs({ skillId, skillName, pageUrl }: Props) {
   const [active, setActive] = useState<AgentKey>("mercury");
   const steps = buildSteps(active, { skillId, skillName, pageUrl });
 
+  // Only fire the analytics event when the agent actually changes (not on
+  // the initial render of the default "mercury" tab).
+  function chooseTab(next: AgentKey) {
+    if (next !== active) {
+      track.installTabSwitched(skillId, next);
+    }
+    setActive(next);
+  }
+
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-2 text-[11px] uppercase font-mono tracking-wider text-[color:var(--color-fg-subtle)]">
@@ -184,7 +194,7 @@ export default function InstallTabs({ skillId, skillName, pageUrl }: Props) {
               aria-controls="install-panel"
               id={`install-tab-${t.key}`}
               tabIndex={isActive ? 0 : -1}
-              onClick={() => setActive(t.key)}
+              onClick={() => chooseTab(t.key)}
               onKeyDown={(e) => {
                 if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
                   e.preventDefault();
@@ -193,7 +203,7 @@ export default function InstallTabs({ skillId, skillName, pageUrl }: Props) {
                     e.key === "ArrowRight"
                       ? TABS[(i + 1) % TABS.length]
                       : TABS[(i - 1 + TABS.length) % TABS.length];
-                  setActive(next.key);
+                  chooseTab(next.key);
                 }
               }}
               className={`relative z-10 px-2.5 py-1.5 rounded-md text-xs transition-colors ${
@@ -233,7 +243,14 @@ export default function InstallTabs({ skillId, skillName, pageUrl }: Props) {
             className="space-y-2.5"
           >
             {steps.map((step, i) => (
-              <StepRow key={i} index={i + 1} step={step} total={steps.length} />
+              <StepRow
+                key={i}
+                index={i + 1}
+                step={step}
+                total={steps.length}
+                skillId={skillId}
+                agent={active}
+              />
             ))}
             <FooterMeta active={active} />
           </motion.div>
@@ -249,10 +266,14 @@ function StepRow({
   index,
   step,
   total,
+  skillId,
+  agent,
 }: {
   index: number;
   step: Step;
   total: number;
+  skillId: string;
+  agent: AgentKey;
 }) {
   const single = total === 1;
   return (
@@ -271,7 +292,13 @@ function StepRow({
         </div>
       </div>
       {step.command && (
-        <CommandBlock command={step.command} multiline={step.multiline} />
+        <CommandBlock
+          command={step.command}
+          multiline={step.multiline}
+          skillId={skillId}
+          agent={agent}
+          step={index}
+        />
       )}
       {step.hint && (
         <div className="text-[11.5px] text-[color:var(--color-fg-subtle)] leading-relaxed pl-0">
@@ -297,15 +324,22 @@ function FooterMeta({ active }: { active: AgentKey }) {
 function CommandBlock({
   command,
   multiline = false,
+  skillId,
+  agent,
+  step,
 }: {
   command: string;
   multiline?: boolean;
+  skillId: string;
+  agent: AgentKey;
+  step: number;
 }) {
   const [copied, setCopied] = useState(false);
   async function copy() {
     try {
       await navigator.clipboard.writeText(command);
       setCopied(true);
+      track.installStepCopied(skillId, agent, step);
       setTimeout(() => setCopied(false), 1500);
     } catch {
       // ignore

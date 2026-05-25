@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Search as SearchIcon, ArrowRight } from "lucide-react";
 import searchIndex from "@/content/search-index.json";
+import { track } from "@/lib/analytics";
 
 interface Doc {
   id: string;
@@ -82,6 +83,17 @@ export default function SearchBox({
   useEffect(() => {
     setActive(0);
   }, [q]);
+
+  // Debounce-and-fire a Search Performed event after the user pauses typing.
+  // 600ms is short enough to feel real-time on the dashboard, long enough to
+  // avoid logging every keystroke ("r", "re", "rea", "reac", "react").
+  useEffect(() => {
+    if (!q.trim()) return;
+    const t = setTimeout(() => {
+      track.searchPerformed(q, results.length);
+    }, 600);
+    return () => clearTimeout(t);
+  }, [q, results.length]);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {

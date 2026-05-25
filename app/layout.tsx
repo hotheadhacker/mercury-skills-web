@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
+import PlausibleAnalytics from "@/components/analytics/Plausible";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="flex-1">{children}</main>
           <Footer />
         </ThemeProvider>
+        <PlausibleAnalytics />
       </body>
     </html>
   );

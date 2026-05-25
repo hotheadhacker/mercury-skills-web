@@ -12,6 +12,7 @@ import { Github, User, Tag, ShieldAlert } from "lucide-react";
 import LikeButton from "@/components/skill/LikeButton";
 import BookmarkButton from "@/components/skill/BookmarkButton";
 import ShareMenu from "@/components/skill/ShareMenu";
+import SkillViewTracker from "@/components/skill/SkillViewTracker";
 import InstallTabs from "@/components/skill/InstallTabs";
 import SkillCard from "@/components/skill/SkillCard";
 
@@ -74,6 +75,11 @@ export default async function SkillPage({
 
   return (
     <article className="mx-auto max-w-6xl px-6 py-10">
+      <SkillViewTracker
+        skillId={skill.id}
+        category={skill.category}
+        version={skill.version}
+      />
       {/* Breadcrumb */}
       <nav className="text-xs font-mono text-[color:var(--color-fg-subtle)] mb-6 flex items-center gap-1.5">
         <Link href="/" className="hover:text-[color:var(--color-fg-muted)]">
@@ -111,13 +117,18 @@ export default async function SkillPage({
               {skill.description}
             </p>
             <div className="flex flex-wrap items-center gap-2 pt-2">
-              <LikeButton id={skill.id} initial={stats.likes} />
-              <BookmarkButton id={skill.id} />
+              <LikeButton
+                id={skill.id}
+                initial={stats.likes}
+                category={skill.category}
+              />
+              <BookmarkButton id={skill.id} category={skill.category} />
               <ShareMenu
                 url={`https://skills.mercuryagent.sh/skills/${skill.id}`}
                 title={skill.title}
                 description={skill.description}
                 imageUrl={`/api/og/skill?id=${encodeURIComponent(skill.id)}`}
+                skillId={skill.id}
               />
               <a
                 href={skill.githubUrl}

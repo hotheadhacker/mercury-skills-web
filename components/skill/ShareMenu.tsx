@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Share2, Copy, Check, X } from "lucide-react";
+import { track } from "@/lib/analytics";
 
 type Props = {
   /** Fully qualified URL to share. */
@@ -13,6 +14,8 @@ type Props = {
   description?: string;
   /** Absolute URL to the OG image so we can render a live preview. */
   imageUrl?: string;
+  /** Skill identifier used as the primary dimension in analytics. */
+  skillId?: string;
 };
 
 /**
@@ -23,7 +26,7 @@ type Props = {
  * The preview uses the same PNG that social crawlers will fetch, so what the
  * user sees here is exactly what their followers will see.
  */
-export default function ShareMenu({ url, title, description, imageUrl }: Props) {
+export default function ShareMenu({ url, title, description, imageUrl, skillId }: Props) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [hasNativeShare, setHasNativeShare] = useState(false);
@@ -62,29 +65,39 @@ export default function ShareMenu({ url, title, description, imageUrl }: Props) 
   const encodedText = encodeURIComponent(shareText);
   const encodedTitle = encodeURIComponent(title);
 
-  const targets: Array<{ label: string; href: string; brand: string }> = [
+  const targets: Array<{
+    label: string;
+    href: string;
+    brand: string;
+    key: "twitter" | "linkedin" | "facebook" | "whatsapp" | "reddit";
+  }> = [
     {
       label: "X / Twitter",
+      key: "twitter",
       brand: "#000000",
       href: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
     },
     {
       label: "LinkedIn",
+      key: "linkedin",
       brand: "#0a66c2",
       href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
     },
     {
       label: "Facebook",
+      key: "facebook",
       brand: "#1877f2",
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
     },
     {
       label: "WhatsApp",
+      key: "whatsapp",
       brand: "#25d366",
       href: `https://api.whatsapp.com/send?text=${encodedText}%20${encodedUrl}`,
     },
     {
       label: "Reddit",
+      key: "reddit",
       brand: "#ff4500",
       href: `https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
     },
@@ -94,6 +107,7 @@ export default function ShareMenu({ url, title, description, imageUrl }: Props) 
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
+      if (skillId) track.skillLinkCopied(skillId);
       setTimeout(() => setCopied(false), 1500);
     } catch {
       // ignore
@@ -103,6 +117,7 @@ export default function ShareMenu({ url, title, description, imageUrl }: Props) 
   async function onNativeShare() {
     try {
       await navigator.share({ title, text: description, url });
+      if (skillId) track.skillShared(skillId, "native");
       setOpen(false);
     } catch {
       // user dismissed - ignore
@@ -206,7 +221,10 @@ export default function ShareMenu({ url, title, description, imageUrl }: Props) 
                   rel="noreferrer noopener"
                   aria-label={`Share on ${t.label}`}
                   title={t.label}
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    if (skillId) track.skillShared(skillId, t.key);
+                    setOpen(false);
+                  }}
                   className="group flex flex-col items-center gap-1.5"
                 >
                   <span

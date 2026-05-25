@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
+import { track } from "@/lib/analytics";
 
 export default function ThemeToggle() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -14,7 +15,9 @@ export default function ThemeToggle() {
   const isDark = current === "dark";
 
   function toggle() {
-    setTheme(isDark ? "light" : "dark");
+    const next = isDark ? "light" : "dark";
+    track.themeToggled(next);
+    setTheme(next);
   }
 
   return (

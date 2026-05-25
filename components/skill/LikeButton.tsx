@@ -2,8 +2,17 @@
 
 import { useState, useTransition } from "react";
 import { Heart } from "lucide-react";
+import { track } from "@/lib/analytics";
 
-export default function LikeButton({ id, initial }: { id: string; initial: number }) {
+export default function LikeButton({
+  id,
+  initial,
+  category,
+}: {
+  id: string;
+  initial: number;
+  category?: string;
+}) {
   const [count, setCount] = useState(initial);
   const [liked, setLiked] = useState(false);
   const [pending, startTransition] = useTransition();
@@ -12,6 +21,7 @@ export default function LikeButton({ id, initial }: { id: string; initial: numbe
     if (liked || pending) return;
     setLiked(true);
     setCount((c) => c + 1);
+    track.skillLiked(id, category ?? "");
     startTransition(async () => {
       try {
         const res = await fetch(`/api/skills/${id}/like`, { method: "POST" });
