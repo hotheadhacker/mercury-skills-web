@@ -1,10 +1,12 @@
 /**
  * Site-wide social card fallback (homepage, /category/*, /bookmarks, etc.).
- * Per-skill pages override this via app/skills/[...slug]/opengraph-image.tsx.
+ * Per-skill pages override this via app/api/og/skill?id=<slug>.
  *
  * Statically generated once per build, immutable on the CDN.
  */
 import { ImageResponse } from "next/og";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { listSkillIds } from "@/lib/skills";
 
 export const runtime = "nodejs";
@@ -13,6 +15,17 @@ export const size = { width: 1200, height: 630 };
 export const alt = "Mercury Skills - Open source skills library";
 export const dynamic = "force-static";
 export const revalidate = false;
+
+// Inline the real logo PNG as a data URL once per process. See the matching
+// comment in app/api/og/skill/route.tsx for rationale.
+const LOGO_DATA_URL = (() => {
+  try {
+    const buf = readFileSync(join(process.cwd(), "public", "logo-dark.png"));
+    return `data:image/png;base64,${buf.toString("base64")}`;
+  } catch {
+    return null;
+  }
+})();
 
 export default async function Image() {
   const skillCount = listSkillIds().length;
@@ -34,26 +47,37 @@ export default async function Image() {
           fontFamily: "Geist, system-ui, sans-serif",
         }}
       >
-        {/* Logo mark */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: 112,
-            height: 112,
-            borderRadius: 26,
-            background: "linear-gradient(140deg, #c9a8ff 0%, #8a5cf6 100%)",
-            color: "#1a0f2e",
-            fontSize: 64,
-            fontWeight: 800,
-            letterSpacing: "-0.04em",
-            boxShadow: "0 12px 36px rgba(201,168,255,0.4)",
-            marginBottom: 36,
-          }}
-        >
-          M
-        </div>
+        {/* Real Mercury logo (inlined PNG); falls back to stylized tile only
+            if the file failed to load at module init. */}
+        {LOGO_DATA_URL ? (
+          <img
+            src={LOGO_DATA_URL}
+            width={120}
+            height={120}
+            alt=""
+            style={{ width: 120, height: 120, objectFit: "contain", marginBottom: 36 }}
+          />
+        ) : (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: 112,
+              height: 112,
+              borderRadius: 26,
+              background: "linear-gradient(140deg, #c9a8ff 0%, #8a5cf6 100%)",
+              color: "#1a0f2e",
+              fontSize: 64,
+              fontWeight: 800,
+              letterSpacing: "-0.04em",
+              boxShadow: "0 12px 36px rgba(201,168,255,0.4)",
+              marginBottom: 36,
+            }}
+          >
+            M
+          </div>
+        )}
 
         <div
           style={{

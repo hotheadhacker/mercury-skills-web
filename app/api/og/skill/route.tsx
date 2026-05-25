@@ -10,25 +10,47 @@
  *   the page's `<meta og:image>` at it via `generateMetadata`.
  *
  * Caching:
- *   - `dynamic = "force-static"` + `revalidate = false` makes Next prerender
- *     one PNG per unique `?id=` query at build time (when reached via
- *     `generateStaticParams`-like crawling) and serve it from the CDN with an
- *     immutable Cache-Control header.
- *   - We also set explicit `Cache-Control: public, max-age=0,
- *     s-maxage=31536000, immutable` on the response so any CDN (including
- *     Vercel's) caches it forever and revalidates only when our build emits a
- *     new artifact.
- *   - Social crawlers (Twitter, Facebook, WhatsApp, Slack, LinkedIn, Discord)
- *     hit the CDN; this function does not re-run on each share.
+ *   - We rely on Vercel's edge CDN (keyed by full URL including query string),
+ *     NOT Next's static prerender. Setting `dynamic = "force-static"` would
+ *     prerender ONE PNG for the empty query at build time and then serve that
+ *     same PNG for every `?id=...` request - a real bug we hit in production.
+ *   - Instead, the route runs on first request per unique `?id=` value, and
+ *     the `Cache-Control: public, s-maxage=31536000, immutable` response
+ *     header makes the CDN cache that PNG forever (until the next deploy
+ *     invalidates the cache).
+ *   - Net result: each skill's card is generated at most once per deploy and
+ *     then served from the edge with zero compute on every subsequent share.
  */
 import { ImageResponse } from "next/og";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { getSkillById } from "@/lib/skills";
 
 export const runtime = "nodejs";
-export const dynamic = "force-static";
-export const revalidate = false;
+// NOTE: deliberately not `force-static` - see header comment above.
+export const dynamic = "force-dynamic";
 
 const SIZE = { width: 1200, height: 630 };
+
+/**
+ * Load the real Mercury logo from `public/` at module init and inline it as a
+ * base64 data URL. Satori can't fetch images at render time without an
+ * absolute URL, and we want zero network round-trips per card render. The
+ * file is small (~46KB) and the data URL is built once per process.
+ *
+ * We use `logo-dark.png` because (per our asset naming convention) that's the
+ * variant designed for dark backgrounds - which is what our card has.
+ */
+const LOGO_DATA_URL = (() => {
+  try {
+    const buf = readFileSync(join(process.cwd(), "public", "logo-dark.png"));
+    return `data:image/png;base64,${buf.toString("base64")}`;
+  } catch {
+    // Build-time safety net: if the file isn't there for any reason, the
+    // route still renders - it just falls back to the stylized M placeholder.
+    return null;
+  }
+})();
 
 // Long-lived immutable cache headers - PNG bytes are content-addressed by
 // build hash, so safe to cache forever.
@@ -221,6 +243,23 @@ function fallbackCard() {
 }
 
 function LogoMark({ size: s = 56 }: { size?: number }) {
+  // Prefer the real Mercury logo PNG (inlined as data URL at module init).
+  // Fall back to a stylized 'M' tile only if the file failed to load.
+  if (LOGO_DATA_URL) {
+    return (
+      <img
+        src={LOGO_DATA_URL}
+        width={s}
+        height={s}
+        alt=""
+        style={{
+          width: s,
+          height: s,
+          objectFit: "contain",
+        }}
+      />
+    );
+  }
   return (
     <div
       style={{
