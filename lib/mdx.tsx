@@ -1,35 +1,43 @@
-import { MDXRemote } from "next-mdx-remote/rsc";
 import { createHighlighter, type Highlighter } from "shiki";
 import type { ReactNode } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-let _hl: Highlighter | null = null;
-async function getHighlighter() {
-  if (_hl) return _hl;
-  _hl = await createHighlighter({
-    themes: ["github-dark-dimmed"],
-    langs: [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "bash",
-      "shell",
-      "py",
-      "python",
-      "md",
-      "markdown",
-      "css",
-      "html",
-      "yaml",
-      "yml",
-      "sql",
-      "go",
-      "rust",
-      "dockerfile",
-    ],
-  });
-  return _hl;
+// Cache the highlighter on globalThis so each worker keeps a single instance
+// across page renders (Shiki warns at 10+ instances per process otherwise).
+declare global {
+  // eslint-disable-next-line no-var
+  var __mercuryShiki: Promise<Highlighter> | undefined;
+}
+
+function getHighlighter(): Promise<Highlighter> {
+  if (!globalThis.__mercuryShiki) {
+    globalThis.__mercuryShiki = createHighlighter({
+      themes: ["github-dark-dimmed", "github-light"],
+      langs: [
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "bash",
+        "shell",
+        "py",
+        "python",
+        "md",
+        "markdown",
+        "css",
+        "html",
+        "yaml",
+        "yml",
+        "sql",
+        "go",
+        "rust",
+        "dockerfile",
+      ],
+    });
+  }
+  return globalThis.__mercuryShiki;
 }
 
 function slugify(s: string) {
@@ -39,11 +47,20 @@ function slugify(s: string) {
     .replace(/^-+|-+$/g, "");
 }
 
+function flattenChildren(children: ReactNode): string {
+  if (children == null) return "";
+  if (typeof children === "string" || typeof children === "number") return String(children);
+  if (Array.isArray(children)) return children.map(flattenChildren).join("");
+  if (typeof children === "object" && "props" in (children as object)) {
+    return flattenChildren((children as { props: { children?: ReactNode } }).props.children);
+  }
+  return "";
+}
+
 const headingFactory = (level: 1 | 2 | 3 | 4) => {
   const Tag = `h${level}` as const;
   return function Heading({ children }: { children?: ReactNode }) {
-    const text = typeof children === "string" ? children : String(children ?? "");
-    const id = slugify(text);
+    const id = slugify(flattenChildren(children));
     return (
       <Tag id={id}>
         <a href={`#${id}`} className="no-underline hover:opacity-80">
@@ -54,14 +71,17 @@ const headingFactory = (level: 1 | 2 | 3 | 4) => {
   };
 };
 
-async function CodeBlock({ children, className }: { children?: ReactNode; className?: string }) {
-  const lang = className?.replace("language-", "") || "text";
-  const code = String(children ?? "").replace(/\n$/, "");
+async function CodeBlock({ code, lang }: { code: string; lang: string }) {
   try {
     const hl = await getHighlighter();
+    const resolvedLang = hl.getLoadedLanguages().includes(lang as never) ? lang : "text";
     const html = hl.codeToHtml(code, {
-      lang: hl.getLoadedLanguages().includes(lang as never) ? lang : "text",
-      theme: "github-dark-dimmed",
+      lang: resolvedLang,
+      themes: {
+        dark: "github-dark-dimmed",
+        light: "github-light",
+      },
+      defaultColor: false,
     });
     return <div dangerouslySetInnerHTML={{ __html: html }} />;
   } catch {
@@ -73,38 +93,42 @@ async function CodeBlock({ children, className }: { children?: ReactNode; classN
   }
 }
 
-const components = {
-  h1: headingFactory(1),
-  h2: headingFactory(2),
-  h3: headingFactory(3),
-  h4: headingFactory(4),
-  pre: ({ children }: { children?: ReactNode }) => <>{children}</>,
-  code: ({ children, className }: { children?: ReactNode; className?: string }) => {
-    if (!className) {
-      return <code>{children}</code>;
-    }
-    // fenced block
-    // @ts-expect-error async server component is fine in MDX
-    return <CodeBlock className={className}>{children}</CodeBlock>;
-  },
-  a: ({ href, children }: { href?: string; children?: ReactNode }) => (
-    <a href={href} target={href?.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
-      {children}
-    </a>
-  ),
-};
-
 export function Markdown({ source }: { source: string }) {
   return (
     <div className="prose max-w-none">
-      <MDXRemote
-        source={source}
-        components={components}
-        options={{
-          parseFrontmatter: false,
-          mdxOptions: { remarkPlugins: [], rehypePlugins: [] },
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+          h1: headingFactory(1),
+          h2: headingFactory(2),
+          h3: headingFactory(3),
+          h4: headingFactory(4),
+          // ReactMarkdown emits <pre><code class="language-x">...</code></pre>
+          // for fenced blocks. We intercept the <pre> wrapper to render via Shiki.
+          pre({ children }) {
+            // children should be a single <code> element
+            const el = children as { props?: { className?: string; children?: ReactNode } };
+            const className = el?.props?.className ?? "";
+            const lang = /language-(\w+)/.exec(className)?.[1] ?? "text";
+            const code = flattenChildren(el?.props?.children).replace(/\n$/, "");
+            return <CodeBlock code={code} lang={lang} />;
+          },
+          code({ className, children }) {
+            // inline code only (fenced blocks are handled by `pre` above)
+            if (className) return <code className={className}>{children}</code>;
+            return <code>{children}</code>;
+          },
+          a({ href, children }) {
+            return (
+              <a href={href} target={href?.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
+                {children}
+              </a>
+            );
+          },
         }}
-      />
+      >
+        {source}
+      </ReactMarkdown>
     </div>
   );
 }

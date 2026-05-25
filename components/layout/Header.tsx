@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BookmarkIcon, TrophyIcon, GithubIcon } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   return (
@@ -33,6 +34,8 @@ export default function Header() {
             <GithubIcon className="w-3.5 h-3.5" />
             GitHub
           </a>
+          <div className="w-px h-5 bg-[color:var(--color-border)] mx-1" />
+          <ThemeToggle />
         </nav>
       </div>
     </header>

@@ -94,7 +94,8 @@ const fileStorage: StatsStorage = {
 
 function makeKvStorage(): StatsStorage {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const { kv } = require("@vercel/kv") as typeof import("@vercel/kv");
+  const { Redis } = require("@upstash/redis") as typeof import("@upstash/redis");
+  const redis = Redis.fromEnv();
   const likesKey = (id: string) => `skill:likes:${id}`;
   const downloadsKey = (id: string) => `skill:downloads:${id}`;
   const LIKES_ZSET = "skills:likes:zset";
@@ -103,15 +104,15 @@ function makeKvStorage(): StatsStorage {
   return {
     async get(id) {
       const [likes, downloads] = await Promise.all([
-        kv.get<number>(likesKey(id)),
-        kv.get<number>(downloadsKey(id)),
+        redis.get<number>(likesKey(id)),
+        redis.get<number>(downloadsKey(id)),
       ]);
       return { likes: likes ?? 0, downloads: downloads ?? 0 };
     },
     async getMany(ids) {
       if (ids.length === 0) return {};
       const keys = ids.flatMap((id) => [likesKey(id), downloadsKey(id)]);
-      const vals = (await kv.mget(...keys)) as (number | null)[];
+      const vals = (await redis.mget(...keys)) as (number | null)[];
       const out: Record<string, SkillStats> = {};
       ids.forEach((id, i) => {
         out[id] = {
@@ -122,17 +123,17 @@ function makeKvStorage(): StatsStorage {
       return out;
     },
     async incrementLike(id) {
-      const v = await kv.incr(likesKey(id));
-      await kv.zadd(LIKES_ZSET, { score: v, member: id });
+      const v = await redis.incr(likesKey(id));
+      await redis.zadd(LIKES_ZSET, { score: v, member: id });
       return v;
     },
     async incrementDownload(id) {
-      const v = await kv.incr(downloadsKey(id));
-      await kv.zadd(DOWNLOADS_ZSET, { score: v, member: id });
+      const v = await redis.incr(downloadsKey(id));
+      await redis.zadd(DOWNLOADS_ZSET, { score: v, member: id });
       return v;
     },
     async topByLikes(limit) {
-      const res = (await kv.zrange(LIKES_ZSET, 0, limit - 1, {
+      const res = (await redis.zrange(LIKES_ZSET, 0, limit - 1, {
         rev: true,
         withScores: true,
       })) as (string | number)[];
@@ -143,7 +144,7 @@ function makeKvStorage(): StatsStorage {
       return out;
     },
     async topByDownloads(limit) {
-      const res = (await kv.zrange(DOWNLOADS_ZSET, 0, limit - 1, {
+      const res = (await redis.zrange(DOWNLOADS_ZSET, 0, limit - 1, {
         rev: true,
         withScores: true,
       })) as (string | number)[];
@@ -159,8 +160,19 @@ function makeKvStorage(): StatsStorage {
 let _storage: StatsStorage | null = null;
 export function storage(): StatsStorage {
   if (_storage) return _storage;
-  if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
+  const hasUpstash =
+    (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) ||
+    (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
+  if (hasUpstash) {
     try {
+      // @upstash/redis' fromEnv() looks for UPSTASH_REDIS_REST_URL/TOKEN by default;
+      // mirror Vercel's KV_* into them if only the legacy vars are present.
+      if (!process.env.UPSTASH_REDIS_REST_URL && process.env.KV_REST_API_URL) {
+        process.env.UPSTASH_REDIS_REST_URL = process.env.KV_REST_API_URL;
+      }
+      if (!process.env.UPSTASH_REDIS_REST_TOKEN && process.env.KV_REST_API_TOKEN) {
+        process.env.UPSTASH_REDIS_REST_TOKEN = process.env.KV_REST_API_TOKEN;
+      }
       _storage = makeKvStorage();
       return _storage;
     } catch (e) {

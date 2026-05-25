@@ -32,15 +32,17 @@ Trigger it once manually from the **Actions** tab → *Sync skills to web-platfo
 5. Build command: `npm run build`.
 6. Output: `.next` (default).
 
-## 4. Provision Vercel KV
+## 4. Provision Upstash Redis
 
-Storage tab → **Create Database** → **KV**. Connect it to the project. Vercel injects:
+Storage tab → **Create Database** → **Marketplace** → **Upstash for Redis**.
+Connect it to the project. Vercel injects:
 
-- `KV_REST_API_URL`
-- `KV_REST_API_TOKEN`
-- `KV_REST_API_READ_ONLY_TOKEN`
+- `UPSTASH_REDIS_REST_URL`
+- `UPSTASH_REDIS_REST_TOKEN`
 
-No code change required — `lib/storage.ts` auto-detects them.
+No code change required — `lib/storage.ts` uses `Redis.fromEnv()` and also
+mirrors the legacy `KV_REST_API_URL` / `KV_REST_API_TOKEN` names if your
+project still has them from the old Vercel KV integration.
 
 ## 5. Attach the domain
 

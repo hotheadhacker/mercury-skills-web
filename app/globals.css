@@ -25,8 +25,36 @@
   --radius-xl: 16px;
 }
 
-:root {
+/* Dark theme is the default. next-themes sets class="dark" on <html>. */
+:root,
+:root.dark {
   color-scheme: dark;
+  --color-bg: #08090b;
+  --color-bg-elev: #0d0f12;
+  --color-bg-elev-2: #14171c;
+  --color-border: #1f232a;
+  --color-border-strong: #2a2f37;
+  --color-fg: #e6e8eb;
+  --color-fg-muted: #8a8f98;
+  --color-fg-subtle: #565a64;
+  --color-brand: #c9a8ff;
+  --color-brand-fg: #1a0f2e;
+  --shiki-theme: "github-dark-dimmed";
+}
+
+:root.light {
+  color-scheme: light;
+  --color-bg: #fbfbfa;
+  --color-bg-elev: #ffffff;
+  --color-bg-elev-2: #f4f4f2;
+  --color-border: #e6e6e3;
+  --color-border-strong: #d4d4d0;
+  --color-fg: #18181b;
+  --color-fg-muted: #61656c;
+  --color-fg-subtle: #9094a0;
+  --color-brand: #6f3cf0;
+  --color-brand-fg: #ffffff;
+  --shiki-theme: "github-light";
 }
 
 html,
@@ -36,6 +64,7 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 * {
@@ -49,14 +78,15 @@ body {
 
 /* Subtle dotted backdrop, Linear-style */
 .bg-dotted {
-  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.04) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, var(--color-border-strong) 1px, transparent 0);
   background-size: 24px 24px;
+  opacity: 0.5;
 }
 
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
@@ -70,6 +100,18 @@ body {
   font-family: var(--font-mono);
   font-size: 13px;
   line-height: 1.6;
+}
+
+/* Shiki dual-theme: pick the right color per active theme */
+.prose pre,
+.prose pre span {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
+}
+:root.light .prose pre,
+:root.light .prose pre span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
 }
 
 .prose code {
