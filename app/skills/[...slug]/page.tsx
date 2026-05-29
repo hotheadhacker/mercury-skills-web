@@ -8,6 +8,7 @@ import {
 } from "@/lib/skills";
 import { storage } from "@/lib/storage";
 import { Markdown } from "@/lib/mdx";
+import { formatNumber } from "@/lib/utils";
 import { Github, User, Tag, ShieldAlert } from "lucide-react";
 import LikeButton from "@/components/skill/LikeButton";
 import BookmarkButton from "@/components/skill/BookmarkButton";
@@ -73,7 +74,16 @@ export default async function SkillPage({
   if (!skill) notFound();
 
   const body = getSkillBody(id);
-  const stats = await storage().get(id);
+  // Treat every detail-page render as a download. We can't observe the user
+  // hovering or clicking through the GitHub redirect, so the page load itself
+  // is the best signal we have that someone consumed this skill. The CLI
+  // increments separately via the JSON detail route (user-agent based), and
+  // the tarball route increments unconditionally - both share the same
+  // counter, so views from any surface roll up into one number.
+  const s = storage();
+  const downloads = await s.incrementDownload(id);
+  const baseStats = await s.get(id);
+  const stats = { ...baseStats, downloads };
   const related = getRelatedSkills(id, 4);
 
   return (
@@ -143,7 +153,7 @@ export default async function SkillPage({
                 View source
               </a>
               <span className="ml-auto text-xs text-[color:var(--color-fg-subtle)] font-mono">
-                {stats.downloads} downloads
+                {formatNumber(stats.downloads)} downloads
               </span>
             </div>
             {skill.tags.length > 0 && (

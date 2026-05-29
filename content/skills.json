@@ -109,7 +109,7 @@
       ],
       "excerpt": "## Overview",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/ai-ml/agent-audit-logging",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "ai-ml/agent-handoff-protocols",
@@ -209,7 +209,7 @@
       ],
       "excerpt": "## Overview",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/ai-ml/agent-handoff-protocols",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "ai-ml/agent-health-monitoring",
@@ -324,7 +324,7 @@
       ],
       "excerpt": "## Overview",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/ai-ml/agent-health-monitoring",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "ai-ml/agent-task-delegation",
@@ -419,7 +419,7 @@
       ],
       "excerpt": "## Overview",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/ai-ml/agent-task-delegation",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "ai-ml/ai-agent-design",
@@ -725,7 +725,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/ai-ml/ai-agent-design",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "ai-ml/error-recovery-retry",
@@ -830,7 +830,7 @@
       ],
       "excerpt": "## Overview",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/ai-ml/error-recovery-retry",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "ai-ml/gbrain-lite",
@@ -900,7 +900,7 @@
       ],
       "excerpt": "> Organize books, people, concepts, and news items from conversations into a searchable, cross-referenced markdown knowledge base.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/ai-ml/gbrain-lite",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "ai-ml/memory-management",
@@ -1006,7 +1006,7 @@
       ],
       "excerpt": "## Overview",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/ai-ml/memory-management",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "ai-ml/prompt-engineering",
@@ -1301,7 +1301,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/ai-ml/prompt-engineering",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "ai-ml/prompt-version-management",
@@ -1416,7 +1416,7 @@
       ],
       "excerpt": "## Overview",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/ai-ml/prompt-version-management",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "ai-ml/token-budget-tracking",
@@ -1526,7 +1526,7 @@
       ],
       "excerpt": "## Overview",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/ai-ml/token-budget-tracking",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "automation/daily-briefing",
@@ -1616,7 +1616,7 @@
       ],
       "excerpt": "> Automatically collect, deduplicate, summarize, and synthesize a daily tech briefing as a warm-voiced MP3 every morning.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/automation/daily-briefing",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "automation/shell-scripting",
@@ -1907,7 +1907,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/automation/shell-scripting",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "automation/workflow-automation",
@@ -2173,7 +2173,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/automation/workflow-automation",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "automation/x-twitter-automation",
@@ -2269,7 +2269,7 @@
       ],
       "excerpt": "Use this skill when an agent needs to search tweets, read tweet replies, monitor X/Twitter topics, draft social posts, or run controlled X actions through a tool-backed workflow.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/automation/x-twitter-automation",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "backend/api-design",
@@ -2374,7 +2374,7 @@
       ],
       "excerpt": "Design APIs that are intuitive, consistent, and a joy to integrate with.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/backend/api-design",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "backend/authentication-authorization",
@@ -2444,7 +2444,7 @@
       ],
       "excerpt": "Implement secure auth in your applications.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/backend/authentication-authorization",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "backend/caching-strategies",
@@ -2513,7 +2513,7 @@
       ],
       "excerpt": "Cache effectively to improve performance and reduce load.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/backend/caching-strategies",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "backend/database-design",
@@ -2573,7 +2573,7 @@
       ],
       "excerpt": "Design efficient, scalable database schemas.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/backend/database-design",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "backend/message-queues",
@@ -2652,7 +2652,7 @@
       ],
       "excerpt": "Design reliable message-driven systems.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/backend/message-queues",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "backend/microservices",
@@ -2721,7 +2721,7 @@
       ],
       "excerpt": "Design and operate microservice architectures.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/backend/microservices",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "backend/nodejs-patterns",
@@ -2790,7 +2790,7 @@
       ],
       "excerpt": "Production-grade Node.js backend patterns.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/backend/nodejs-patterns",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "backend/python-patterns",
@@ -2934,7 +2934,7 @@
       ],
       "excerpt": "Write Python that is type-safe, testable, and a joy to maintain.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/backend/python-patterns",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "backend/serverless-patterns",
@@ -3008,7 +3008,7 @@
       ],
       "excerpt": "Build scalable serverless applications.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/backend/serverless-patterns",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "business/negotiation",
@@ -3229,7 +3229,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/business/negotiation",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "business/startup-strategy",
@@ -3381,7 +3381,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/business/startup-strategy",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "career/career-planning",
@@ -3445,7 +3445,7 @@
       ],
       "excerpt": "Design and execute a long-term career strategy.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/career/career-planning",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "career/interview-prep",
@@ -3509,7 +3509,7 @@
       ],
       "excerpt": "Systematic preparation for technical and behavioral interviews.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/career/interview-prep",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "career/linkedin-optimization",
@@ -3578,7 +3578,7 @@
       ],
       "excerpt": "Turn your LinkedIn profile into a career asset.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/career/linkedin-optimization",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "career/resume-writing",
@@ -3642,7 +3642,7 @@
       ],
       "excerpt": "Craft resumes that pass ATS filters and impress human reviewers.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/career/resume-writing",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "career/salary-negotiation",
@@ -3716,7 +3716,7 @@
       ],
       "excerpt": "Negotiate compensation effectively and professionally.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/career/salary-negotiation",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "creative-personal-development/content-repurposer",
@@ -3846,7 +3846,7 @@
       ],
       "excerpt": "## What It Does",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/creative-personal-development/content-repurposer",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "creative-personal-development/daily-standup-journal",
@@ -3986,7 +3986,7 @@
       ],
       "excerpt": "## What It Does",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/creative-personal-development/daily-standup-journal",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "creative-personal-development/decision-matrix",
@@ -4120,7 +4120,7 @@
       ],
       "excerpt": "## What It Does",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/creative-personal-development/decision-matrix",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "creative-personal-development/idea-validator",
@@ -4270,7 +4270,7 @@
       ],
       "excerpt": "## What It Does",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/creative-personal-development/idea-validator",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "creative-personal-development/meeting-note-summarizer",
@@ -4395,7 +4395,7 @@
       ],
       "excerpt": "## What It Does",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/creative-personal-development/meeting-note-summarizer",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "creative-personal-development/personal-branding-statement",
@@ -4555,7 +4555,7 @@
       ],
       "excerpt": "## What It Does",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/creative-personal-development/personal-branding-statement",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "creative-personal-development/storytelling-advisor",
@@ -4685,7 +4685,7 @@
       ],
       "excerpt": "## What It Does",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/creative-personal-development/storytelling-advisor",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "creative-personal-development/time-blocking-scheduler",
@@ -4840,7 +4840,7 @@
       ],
       "excerpt": "## What It Does",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/creative-personal-development/time-blocking-scheduler",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "data/data-pipeline",
@@ -5105,7 +5105,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/data/data-pipeline",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "design/accessibility",
@@ -5384,7 +5384,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/design/accessibility",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "design/ui-design-system",
@@ -5663,7 +5663,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/design/ui-design-system",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/api-documentation",
@@ -5812,7 +5812,7 @@
       ],
       "excerpt": "Document APIs that developers love to integrate with — complete, accurate, and testable from the spec itself.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/api-documentation",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/architecture-decision-records",
@@ -5976,7 +5976,7 @@
       ],
       "excerpt": "Capture architectural decisions systematically so your team understands not just what was decided, but why — and what alternatives were considered.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/architecture-decision-records",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/clean-code",
@@ -6075,7 +6075,7 @@
       ],
       "excerpt": "Write code that humans can read, understand, and change with confidence.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/clean-code",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/code-review",
@@ -6269,7 +6269,7 @@
       ],
       "excerpt": "Systematic code review methodology for consistent, effective, and humane reviews that improve both code and team culture.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/code-review",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/debugging-mastery",
@@ -6423,7 +6423,7 @@
       ],
       "excerpt": "A structured approach to finding and fixing bugs systematically — from initial symptom to permanent resolution.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/debugging-mastery",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/dependency-management",
@@ -6487,7 +6487,7 @@
       ],
       "excerpt": "Safely manage project dependencies at scale.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/dependency-management",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/documentation-generation",
@@ -6661,7 +6661,7 @@
       ],
       "excerpt": "Write documentation that people actually read, understand, and trust — with automated workflows that keep it accurate.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/documentation-generation",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/git-workflow",
@@ -6795,7 +6795,7 @@
       ],
       "excerpt": "Master the fundamentals of version control collaboration — from branching strategy to commit hygiene to review culture.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/git-workflow",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/hyperframes",
@@ -6959,7 +6959,7 @@
       ],
       "excerpt": "Write HTML. Render video. Built for agents.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/hyperframes",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/hyperframes-cli",
@@ -7036,7 +7036,7 @@
       ],
       "excerpt": "Everything runs through `npx hyperframes`. Requires **Node.js >= 22** and **FFmpeg**.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/hyperframes-cli",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/hyperframes-media",
@@ -7149,7 +7149,7 @@
       ],
       "excerpt": "Three CLI commands that produce assets for compositions: `tts` (speech), `transcribe` (timestamps), and `remove-background` (transparent video). Each downloads a model on first run and caches it under `~/.cache/hyperframes/`.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/hyperframes-media",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/knowledge-base",
@@ -7378,7 +7378,7 @@
       ],
       "excerpt": "Build searchable, maintainable knowledge bases that your team actually uses — turning tribal knowledge into organizational assets.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/knowledge-base",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/markdown-mastery",
@@ -7662,7 +7662,7 @@
       ],
       "excerpt": "Write expressive, beautifully formatted markdown — from basic documents to complex technical content with diagrams, advanced formatting, and automated tooling.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/markdown-mastery",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/refactoring-patterns",
@@ -7716,7 +7716,7 @@
       ],
       "excerpt": "Systematically improve code without changing its behavior.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/refactoring-patterns",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/technical-writing",
@@ -7900,7 +7900,7 @@
       ],
       "excerpt": "Write clear, effective technical documentation that your audience can actually use — SOPs that get followed, manuals that solve problems, and release notes that keep everyone informed.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/technical-writing",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "development/testing-strategies",
@@ -8065,7 +8065,7 @@
       ],
       "excerpt": "A comprehensive approach to testing that gives you confidence your code works correctly — from unit tests to mutation testing.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/development/testing-strategies",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "devops/ci-cd-pipeline",
@@ -8176,7 +8176,7 @@
       ],
       "excerpt": "## Overview",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/devops/ci-cd-pipeline",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "devops/cloud-architecture",
@@ -8247,7 +8247,7 @@
       ],
       "excerpt": "Design resilient, cost-effective cloud architectures.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/devops/cloud-architecture",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "devops/docker-patterns",
@@ -8339,7 +8339,7 @@
       ],
       "excerpt": "## Overview",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/devops/docker-patterns",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "devops/kubernetes-patterns",
@@ -8413,7 +8413,7 @@
       ],
       "excerpt": "Deploy and manage production Kubernetes clusters.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/devops/kubernetes-patterns",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "devops/monitoring-observability",
@@ -8493,7 +8493,7 @@
       ],
       "excerpt": "Build comprehensive observability for your systems.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/devops/monitoring-observability",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "devops/sre-practices",
@@ -8567,7 +8567,7 @@
       ],
       "excerpt": "Apply Site Reliability Engineering principles.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/devops/sre-practices",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "devops/terraform-iac",
@@ -8636,7 +8636,7 @@
       ],
       "excerpt": "Manage infrastructure with Terraform.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/devops/terraform-iac",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "education-learning/assessment-design",
@@ -8700,7 +8700,7 @@
       ],
       "excerpt": "Create fair, effective assessments that measure real learning.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/education-learning/assessment-design",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "education-learning/curriculum-design",
@@ -8751,7 +8751,7 @@
       ],
       "excerpt": "Design effective curricula following learning science principles.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/education-learning/curriculum-design",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "education-learning/learning-science",
@@ -8830,7 +8830,7 @@
       ],
       "excerpt": "Evidence-based techniques that make learning stick.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/education-learning/learning-science",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "education-learning/micro-learning",
@@ -8899,7 +8899,7 @@
       ],
       "excerpt": "Design bite-sized learning experiences that fit into busy schedules.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/education-learning/micro-learning",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "education-learning/teaching-methods",
@@ -8968,7 +8968,7 @@
       ],
       "excerpt": "Effective teaching approaches for different learning contexts.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/education-learning/teaching-methods",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "finance-legal/budgeting-forecasting",
@@ -9027,7 +9027,7 @@
       ],
       "excerpt": "Create and manage effective budgets and financial forecasts.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/finance-legal/budgeting-forecasting",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "finance-legal/contract-review",
@@ -9086,7 +9086,7 @@
       ],
       "excerpt": "Review and negotiate contracts effectively.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/finance-legal/contract-review",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "finance-legal/financial-analysis",
@@ -9150,7 +9150,7 @@
       ],
       "excerpt": "Analyze financial statements and business health.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/finance-legal/financial-analysis",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "finance-legal/privacy-compliance",
@@ -9210,7 +9210,7 @@
       ],
       "excerpt": "Build and maintain privacy compliance programs.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/finance-legal/privacy-compliance",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "finance-legal/risk-management",
@@ -9279,7 +9279,7 @@
       ],
       "excerpt": "Identify, assess, and mitigate business and operational risks.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/finance-legal/risk-management",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "frontend/component-design-systems",
@@ -9324,7 +9324,7 @@
       ],
       "excerpt": "Patterns for building scalable, accessible, and maintainable component libraries.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/frontend/component-design-systems",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "frontend/frontend-testing",
@@ -9390,7 +9390,7 @@
       ],
       "excerpt": "Complete testing strategy for frontend applications — from unit tests to visual regression to E2E.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/frontend/frontend-testing",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "frontend/nextjs-patterns",
@@ -9502,7 +9502,7 @@
       ],
       "excerpt": "Comprehensive guide to building production-grade Next.js applications with the App Router, Server Components, and modern React patterns.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/frontend/nextjs-patterns",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "frontend/react-patterns",
@@ -9641,7 +9641,7 @@
       ],
       "excerpt": "Build React applications that are composable, performant, and maintainable.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/frontend/react-patterns",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "frontend/responsive-design",
@@ -9691,7 +9691,7 @@
       ],
       "excerpt": "Modern responsive design patterns using mobile-first methodology, CSS Grid, Flexbox, and container queries.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/frontend/responsive-design",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "frontend/state-management",
@@ -9757,7 +9757,7 @@
       ],
       "excerpt": "Comprehensive patterns for managing state in modern frontend applications — from local component state to global application state.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/frontend/state-management",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "frontend/tailwind-css",
@@ -9891,7 +9891,7 @@
       ],
       "excerpt": "Build beautiful, responsive interfaces efficiently with utility-first CSS.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/frontend/tailwind-css",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "frontend/web-performance",
@@ -9951,7 +9951,7 @@
       ],
       "excerpt": "Systematic approach to measuring, analyzing, and optimizing web application performance.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/frontend/web-performance",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "health-wellness/fitness-planning",
@@ -10010,7 +10010,7 @@
       ],
       "excerpt": "Design effective workout programs for any goal.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/health-wellness/fitness-planning",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "health-wellness/habit-formation",
@@ -10079,7 +10079,7 @@
       ],
       "excerpt": "Build lasting habits using evidence-based behavior change techniques.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/health-wellness/habit-formation",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "health-wellness/mental-health",
@@ -10143,7 +10143,7 @@
       ],
       "excerpt": "Build resilience, manage stress, and maintain mental wellness.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/health-wellness/mental-health",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "health-wellness/nutrition-planning",
@@ -10202,7 +10202,7 @@
       ],
       "excerpt": "Build sustainable nutrition plans for health and performance.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/health-wellness/nutrition-planning",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "health-wellness/sleep-optimization",
@@ -10271,7 +10271,7 @@
       ],
       "excerpt": "Optimize sleep quality and duration for health and performance.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/health-wellness/sleep-optimization",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "marketing/content-creation",
@@ -10588,7 +10588,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/marketing/content-creation",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "marketing/local-business-growth",
@@ -10779,7 +10779,7 @@
       ],
       "excerpt": "> A mini marketing agency for local businesses. Each skill is designed to be usable by someone who's never run a marketing campaign before.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/marketing/local-business-growth",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "marketing/seo-strategy",
@@ -11076,7 +11076,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/marketing/seo-strategy",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "media-download/audio-extraction",
@@ -11275,7 +11275,7 @@
       ],
       "excerpt": "Extract high-quality audio from video files, convert between formats, manage metadata, and build organized audio collections. This skill covers everything from one-off audio rips to batch processing pipelines.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/media-download/audio-extraction",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "media-download/legal-downloading",
@@ -11519,7 +11519,7 @@
       ],
       "excerpt": "Download media legally and responsibly. This skill covers the legal landscape of media downloading — what's allowed, what's not, and how to build workflows that respect copyright while still getting the content you need offline.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/media-download/legal-downloading",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "media-download/playlist-archiver",
@@ -11728,7 +11728,7 @@
       ],
       "excerpt": "Build reliable offline media archives from playlists and channels. This skill covers incremental downloading, archive management, scheduling, metadata extraction, and organizing large media collections that stay up-to-date automatically.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/media-download/playlist-archiver",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "media-download/video-downloader",
@@ -11977,7 +11977,7 @@
       ],
       "excerpt": "Download videos from thousands of sites using yt-dlp — the most powerful and actively maintained video downloading tool. This skill covers installation, configuration, format selection, playlist management, and optimization techniques.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/media-download/video-downloader",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "mobile/android-kotlin-patterns",
@@ -12041,7 +12041,7 @@
       ],
       "excerpt": "Production Android development with Kotlin and Jetpack.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/mobile/android-kotlin-patterns",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "mobile/app-store-optimization",
@@ -12105,7 +12105,7 @@
       ],
       "excerpt": "Optimize your app's presence on the App Store and Google Play.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/mobile/app-store-optimization",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "mobile/ios-swift-patterns",
@@ -12170,7 +12170,7 @@
       ],
       "excerpt": "Production-grade iOS development with Swift, SwiftUI, and UIKit.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/mobile/ios-swift-patterns",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "mobile/mobile-performance",
@@ -12230,7 +12230,7 @@
       ],
       "excerpt": "Profile, diagnose, and optimize mobile app performance.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/mobile/mobile-performance",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "mobile/react-native-patterns",
@@ -12294,7 +12294,138 @@
       ],
       "excerpt": "Build performant cross-platform mobile apps with React Native.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/mobile/react-native-patterns",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
+    },
+    {
+      "id": "pdf-generation/any2pdf",
+      "slug": "any2pdf",
+      "category": "PDF Generation",
+      "categorySlug": "pdf-generation",
+      "name": "any2pdf",
+      "title": "any2pdf — Markdown to Professionally Typeset PDF",
+      "description": "Convert Markdown to publication-quality PDF with reportlab — CJK/Latin mixed text, themes, cover pages, watermarks, callouts, formulas, and interactive theme selection",
+      "tags": [
+        "markdown",
+        "pdf",
+        "cjk",
+        "reportlab",
+        "typesetting",
+        "themes",
+        "any2pdf"
+      ],
+      "author": "lovstudio",
+      "version": "1.1.0",
+      "readingTime": 9,
+      "headings": [
+        {
+          "depth": 1,
+          "text": "any2pdf — Markdown to Professionally Typeset PDF",
+          "slug": "any2pdf-markdown-to-professionally-typeset-pdf"
+        },
+        {
+          "depth": 2,
+          "text": "When to Use",
+          "slug": "when-to-use"
+        },
+        {
+          "depth": 2,
+          "text": "Where the Runtime Lives",
+          "slug": "where-the-runtime-lives"
+        },
+        {
+          "depth": 2,
+          "text": "Quick Start",
+          "slug": "quick-start"
+        },
+        {
+          "depth": 2,
+          "text": "Pre-Conversion Options (MANDATORY)",
+          "slug": "pre-conversion-options-mandatory"
+        },
+        {
+          "depth": 3,
+          "text": "Suggested Prompt Template (English)",
+          "slug": "suggested-prompt-template-english"
+        },
+        {
+          "depth": 3,
+          "text": "Mapping User Choices to CLI Args",
+          "slug": "mapping-user-choices-to-cli-args"
+        },
+        {
+          "depth": 3,
+          "text": "Theme Name Mapping",
+          "slug": "theme-name-mapping"
+        },
+        {
+          "depth": 3,
+          "text": "Handling AI-Generated Frontispiece",
+          "slug": "handling-ai-generated-frontispiece"
+        },
+        {
+          "depth": 2,
+          "text": "Architecture",
+          "slug": "architecture"
+        },
+        {
+          "depth": 2,
+          "text": "Hard-Won Lessons",
+          "slug": "hard-won-lessons"
+        },
+        {
+          "depth": 3,
+          "text": "CJK Characters Rendering as □",
+          "slug": "cjk-characters-rendering-as"
+        },
+        {
+          "depth": 3,
+          "text": "Code Blocks Losing Line Breaks",
+          "slug": "code-blocks-losing-line-breaks"
+        },
+        {
+          "depth": 3,
+          "text": "CJK/Latin Word Wrapping",
+          "slug": "cjk-latin-word-wrapping"
+        },
+        {
+          "depth": 3,
+          "text": "Canvas Text with CJK (Cover / Footer)",
+          "slug": "canvas-text-with-cjk-cover-footer"
+        },
+        {
+          "depth": 2,
+          "text": "Configuration Reference",
+          "slug": "configuration-reference"
+        },
+        {
+          "depth": 2,
+          "text": "Themes",
+          "slug": "themes"
+        },
+        {
+          "depth": 2,
+          "text": "Dependencies",
+          "slug": "dependencies"
+        },
+        {
+          "depth": 3,
+          "text": "Fonts",
+          "slug": "fonts"
+        },
+        {
+          "depth": 2,
+          "text": "What You Get",
+          "slug": "what-you-get"
+        },
+        {
+          "depth": 2,
+          "text": "License & Attribution",
+          "slug": "license-attribution"
+        }
+      ],
+      "excerpt": "> **Credits.** This skill is adapted from [`lovstudio/any2pdf`](https://github.com/lovstudio/any2pdf) by **lovstudio**, distributed under the MIT license. The original repository ships the Python implementation (`md2pdf.py`), preview gallery, and reference theme JSONs. This docum",
+      "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/pdf-generation/any2pdf",
+      "updatedAt": "2026-05-28T17:12:05.246Z"
     },
     {
       "id": "pdf-generation/invoice-document-pdf",
@@ -12408,7 +12539,7 @@
       ],
       "excerpt": "Generate professional business documents — invoices, contracts, receipts, forms — as polished PDFs. This skill covers templates, data-driven generation, batch processing, digital signatures, and workflow automation.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/pdf-generation/invoice-document-pdf",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "pdf-generation/markdown-to-pdf",
@@ -12573,7 +12704,7 @@
       ],
       "excerpt": "Convert Markdown documents into polished, production-ready PDFs. This skill covers the major toolchains — Pandoc, WeasyPrint, ReportLab — plus CSS print styling, template systems, and batch conversion workflows.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/pdf-generation/markdown-to-pdf",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "pdf-generation/report-generation",
@@ -12727,7 +12858,7 @@
       ],
       "excerpt": "Create structured, data-driven PDF reports that communicate insights effectively. This skill covers the full pipeline — from data sources and templates to polished PDF output with charts, tables, and professional formatting.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/pdf-generation/report-generation",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "pdf-generation/typesetting-latex",
@@ -12956,7 +13087,7 @@
       ],
       "excerpt": "LaTeX is the gold standard for professional typesetting — used for academic papers, technical books, theses, resumes, and presentations. This skill covers document structure, packages, math typesetting, tables, figures, bibliographies, beamer presentations, and CI/CD workflows.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/pdf-generation/typesetting-latex",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "presentation/data-storytelling",
@@ -13170,7 +13301,7 @@
       ],
       "excerpt": "Turn raw data into compelling visual narratives that audiences understand, remember, and act on.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/presentation/data-storytelling",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "presentation/pitch-deck-creation",
@@ -13335,7 +13466,7 @@
       ],
       "excerpt": "Create pitch decks that raise capital, launch products, and win customers — with proven structures from top accelerators and investors.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/presentation/pitch-deck-creation",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "presentation/presentation-automation",
@@ -13494,7 +13625,7 @@
       ],
       "excerpt": "Automate slide generation from data sources, build programmatic presentations, and integrate slide creation into CI/CD pipelines.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/presentation/presentation-automation",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "presentation/presentation-design",
@@ -13758,7 +13889,7 @@
       ],
       "excerpt": "Design presentations that communicate clearly, hold attention, and drive action — grounded in visual design principles and narrative structure.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/presentation/presentation-design",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "product/product-strategy",
@@ -13940,7 +14071,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/product/product-strategy",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "product/user-research",
@@ -14131,7 +14262,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/product/user-research",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "security/secure-coding",
@@ -14481,7 +14612,7 @@
       ],
       "excerpt": "Writing code that is resistant to attack requires intentional practices at every layer. This skill covers the fundamental security patterns every developer should implement: input validation, authentication, authorization, cryptography, secrets management, and error handling.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/security/secure-coding",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "security/security-audit",
@@ -14795,7 +14926,7 @@
       ],
       "excerpt": "A systematic approach to evaluating the security posture of applications, systems, and infrastructure. This skill equips you with the methodology, tooling, and reporting standards needed to conduct professional-grade security audits.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/security/security-audit",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "shop-restaurant/daily-pulse",
@@ -14886,7 +15017,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/shop-restaurant/daily-pulse",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "shop-restaurant/inventory-optimizer",
@@ -14976,7 +15107,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/shop-restaurant/inventory-optimizer",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "shop-restaurant/menu-engineer",
@@ -15071,7 +15202,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/shop-restaurant/menu-engineer",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "shop-restaurant/price-scout",
@@ -15161,7 +15292,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/shop-restaurant/price-scout",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "shop-restaurant/review-responder",
@@ -15252,7 +15383,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/shop-restaurant/review-responder",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "shop-restaurant/social-post",
@@ -15348,7 +15479,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/shop-restaurant/social-post",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "shop-restaurant/staff-scheduler",
@@ -15443,7 +15574,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/shop-restaurant/staff-scheduler",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "shop-restaurant/table-manager",
@@ -15538,7 +15669,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/shop-restaurant/table-manager",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "shop-restaurant/zomato-order",
@@ -15673,7 +15804,7 @@
       ],
       "excerpt": "## Core Principles",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/shop-restaurant/zomato-order",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "testing-qa/accessibility-testing",
@@ -15737,7 +15868,7 @@
       ],
       "excerpt": "Systematically test and improve web accessibility.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/testing-qa/accessibility-testing",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "testing-qa/api-testing",
@@ -15796,7 +15927,7 @@
       ],
       "excerpt": "Test REST and GraphQL APIs systematically.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/testing-qa/api-testing",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "testing-qa/e2e-testing",
@@ -15855,7 +15986,7 @@
       ],
       "excerpt": "End-to-end testing with Playwright and Cypress.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/testing-qa/e2e-testing",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "testing-qa/performance-testing",
@@ -15904,7 +16035,7 @@
       ],
       "excerpt": "Load, stress, and spike test your systems to ensure reliability at scale.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/testing-qa/performance-testing",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
       "id": "testing-qa/test-strategy",
@@ -15963,7 +16094,7 @@
       ],
       "excerpt": "Design comprehensive test strategies that catch bugs early and scale with your product.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/testing-qa/test-strategy",
-      "updatedAt": "2026-05-18T12:45:29.000Z"
+      "updatedAt": "2026-05-25T15:56:03.000Z"
     }
   ],
   "categories": [
@@ -16050,7 +16181,7 @@
     {
       "slug": "pdf-generation",
       "name": "PDF Generation",
-      "count": 4
+      "count": 5
     },
     {
       "slug": "creative-personal-development",
@@ -16083,5 +16214,5 @@
       "count": 5
     }
   ],
-  "generatedAt": "2026-05-25T14:57:01.967Z"
+  "generatedAt": "2026-05-29T12:28:33.502Z"
 }

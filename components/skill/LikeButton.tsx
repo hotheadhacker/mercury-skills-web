@@ -4,6 +4,7 @@ import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { Heart } from "lucide-react";
 import { track } from "@/lib/analytics";
+import { formatNumber } from "@/lib/utils";
 
 export default function LikeButton({
   id,
@@ -51,7 +52,7 @@ export default function LikeButton({
       }`}
     >
       <Heart className={`w-3.5 h-3.5 ${liked ? "fill-current" : ""}`} />
-      <span>{count}</span>
+      <span>{formatNumber(count)}</span>
     </button>
   );
 }

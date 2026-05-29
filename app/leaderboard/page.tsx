@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAllSkills } from "@/lib/skills";
 import { getStatsMap } from "@/lib/stats";
+import { formatNumber } from "@/lib/utils";
 import { Trophy, Heart, Download } from "lucide-react";
 
 // Leaderboard must reflect the latest counts on every visit; static caching
@@ -82,7 +83,7 @@ function Board({
                     {s.category}
                   </div>
                 </div>
-                <span className="text-xs font-mono text-[color:var(--color-fg-muted)]">{stat}</span>
+                <span className="text-xs font-mono text-[color:var(--color-fg-muted)]">{formatNumber(Math.round(stat))}</span>
               </Link>
             </li>
           );

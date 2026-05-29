@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { SkillIndexEntry } from "@/lib/skills";
+import { formatNumber } from "@/lib/utils";
 
 interface Props {
   skill: SkillIndexEntry;
@@ -35,8 +36,8 @@ export default function SkillCard({ skill, stats }: Props) {
         </div>
         {stats && (
           <div className="flex items-center gap-3 text-xs text-[color:var(--color-fg-subtle)] font-mono">
-            <span>♥ {stats.likes}</span>
-            <span>↓ {stats.downloads}</span>
+            <span>♥ {formatNumber(stats.likes)}</span>
+            <span>↓ {formatNumber(stats.downloads)}</span>
           </div>
         )}
       </div>
