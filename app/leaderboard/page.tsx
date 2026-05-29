@@ -20,7 +20,15 @@ export default async function LeaderboardPage() {
 
   const topLikes = [...enriched].sort((a, b) => b.likes - a.likes).slice(0, 20);
   const topDownloads = [...enriched].sort((a, b) => b.downloads - a.downloads).slice(0, 20);
-  const topOverall = [...enriched].sort((a, b) => b.popularity - a.popularity).slice(0, 20);
+  // Overall ranks by downloads first (the strongest consumption signal),
+  // breaks ties by likes, then by the deterministic seed inside popularity.
+  const topOverall = [...enriched]
+    .sort((a, b) => {
+      if (b.downloads !== a.downloads) return b.downloads - a.downloads;
+      if (b.likes !== a.likes) return b.likes - a.likes;
+      return b.popularity - a.popularity;
+    })
+    .slice(0, 20);
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-12">
@@ -67,7 +75,10 @@ function Board({
       </div>
       <ol className="divide-y divide-[color:var(--color-border)]">
         {items.map((s, i) => {
-          const stat = kind === "likes" ? s.likes : kind === "downloads" ? s.downloads : s.popularity;
+          // The "Overall" board sorts by a composite score but shows the
+          // user-meaningful number (downloads) - displaying the raw
+          // popularity float would be noise.
+          const stat = kind === "likes" ? s.likes : s.downloads;
           return (
             <li key={s.id}>
               <Link
@@ -83,7 +94,7 @@ function Board({
                     {s.category}
                   </div>
                 </div>
-                <span className="text-xs font-mono text-[color:var(--color-fg-muted)]">{formatNumber(Math.round(stat))}</span>
+                <span className="text-xs font-mono text-[color:var(--color-fg-muted)]">{formatNumber(stat)}</span>
               </Link>
             </li>
           );

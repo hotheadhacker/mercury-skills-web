@@ -63,7 +63,7 @@ export default async function HomePage() {
         <SectionHeader
           icon={<TrendingUp className="w-4 h-4" />}
           title="Trending skills"
-          subtitle="Ranked by likes & downloads from the community."
+          subtitle="Ranked by downloads, then likes."
           href="/leaderboard"
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 sm:mt-8">
