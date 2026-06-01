@@ -14929,6 +14929,195 @@
       "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
+      "id": "shop-restaurant/amazon-assistant",
+      "slug": "amazon-assistant",
+      "category": "Shop & Restaurant",
+      "categorySlug": "shop-restaurant",
+      "name": "amazon-assistant",
+      "title": "Amazon Assistant 🛒",
+      "description": "Headless Amazon assistant — cookie-based session reuse to search, compare, sort, manage cart, track orders, surface deals, and analyze spending across amazon.in / amazon.com / amazon.co.uk / amazon.de / amazon.co.jp / etc. Checkout is prepare-and-handoff: the skill builds the cart and opens the final checkout URL; the user clicks Place Order.",
+      "tags": [
+        "amazon",
+        "shopping",
+        "browser-automation",
+        "playwright",
+        "cookies",
+        "price-comparison",
+        "cart",
+        "orders",
+        "deals",
+        "spending-insights"
+      ],
+      "author": "cosmicstack-labs",
+      "version": "1.0.0",
+      "readingTime": 20,
+      "headings": [
+        {
+          "depth": 1,
+          "text": "Amazon Assistant 🛒",
+          "slug": "amazon-assistant"
+        },
+        {
+          "depth": 2,
+          "text": "Core Principle",
+          "slug": "core-principle"
+        },
+        {
+          "depth": 2,
+          "text": "When To Use This Skill",
+          "slug": "when-to-use-this-skill"
+        },
+        {
+          "depth": 3,
+          "text": "Setup-state precedence (agent MUST follow this order)",
+          "slug": "setup-state-precedence-agent-must-follow-this-order"
+        },
+        {
+          "depth": 3,
+          "text": "Trigger phrases",
+          "slug": "trigger-phrases"
+        },
+        {
+          "depth": 3,
+          "text": "When NOT to use",
+          "slug": "when-not-to-use"
+        },
+        {
+          "depth": 2,
+          "text": "Setup",
+          "slug": "setup"
+        },
+        {
+          "depth": 3,
+          "text": "1. Resolve the marketplace domain",
+          "slug": "1-resolve-the-marketplace-domain"
+        },
+        {
+          "depth": 3,
+          "text": "2. Install runtime",
+          "slug": "2-install-runtime"
+        },
+        {
+          "depth": 3,
+          "text": "3. Capture cookies — two paths, in order of preference",
+          "slug": "3-capture-cookies-two-paths-in-order-of-preference"
+        },
+        {
+          "depth": 4,
+          "text": "Path A (PRIMARY) — Auto-capture via headed browser",
+          "slug": "path-a-primary-auto-capture-via-headed-browser"
+        },
+        {
+          "depth": 4,
+          "text": "Path B (FALLBACK) — Paste cookies from EditThisCookie",
+          "slug": "path-b-fallback-paste-cookies-from-editthiscookie"
+        },
+        {
+          "depth": 5,
+          "text": "Steps for the user",
+          "slug": "steps-for-the-user"
+        },
+        {
+          "depth": 5,
+          "text": "What the agent should tell the user",
+          "slug": "what-the-agent-should-tell-the-user"
+        },
+        {
+          "depth": 5,
+          "text": "Security note for paste-mode",
+          "slug": "security-note-for-paste-mode"
+        },
+        {
+          "depth": 3,
+          "text": "4. Verify (works for both paths)",
+          "slug": "4-verify-works-for-both-paths"
+        },
+        {
+          "depth": 2,
+          "text": "Core Capabilities",
+          "slug": "core-capabilities"
+        },
+        {
+          "depth": 3,
+          "text": "Search",
+          "slug": "search"
+        },
+        {
+          "depth": 3,
+          "text": "Product detail + reviews",
+          "slug": "product-detail-reviews"
+        },
+        {
+          "depth": 3,
+          "text": "Compare items",
+          "slug": "compare-items"
+        },
+        {
+          "depth": 3,
+          "text": "Cart",
+          "slug": "cart"
+        },
+        {
+          "depth": 3,
+          "text": "Checkout (prepare-and-handoff)",
+          "slug": "checkout-prepare-and-handoff"
+        },
+        {
+          "depth": 3,
+          "text": "Orders",
+          "slug": "orders"
+        },
+        {
+          "depth": 3,
+          "text": "Deals & offers",
+          "slug": "deals-offers"
+        },
+        {
+          "depth": 3,
+          "text": "Spending insights",
+          "slug": "spending-insights"
+        },
+        {
+          "depth": 2,
+          "text": "Selector Resilience",
+          "slug": "selector-resilience"
+        },
+        {
+          "depth": 2,
+          "text": "Anti-Detection Guidance",
+          "slug": "anti-detection-guidance"
+        },
+        {
+          "depth": 2,
+          "text": "Security",
+          "slug": "security"
+        },
+        {
+          "depth": 2,
+          "text": "File Layout",
+          "slug": "file-layout"
+        },
+        {
+          "depth": 2,
+          "text": "Reference Implementation",
+          "slug": "reference-implementation"
+        },
+        {
+          "depth": 2,
+          "text": "Versioning & Maintenance",
+          "slug": "versioning-maintenance"
+        },
+        {
+          "depth": 2,
+          "text": "License",
+          "slug": "license"
+        }
+      ],
+      "excerpt": "> **⚠ Terms-of-Service notice.** Amazon's [Conditions of Use](https://www.amazon.com/gp/help/customer/display.html?nodeId=508088) prohibit automated access, scraping, and bots. This skill drives a real browser session with the user's own cookies — Amazon may still treat that as a",
+      "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/shop-restaurant/amazon-assistant",
+      "updatedAt": "2026-06-01T05:46:49.417Z"
+    },
+    {
       "id": "shop-restaurant/daily-pulse",
       "slug": "daily-pulse",
       "category": "Shop & Restaurant",
@@ -16206,7 +16395,7 @@
     {
       "slug": "shop-restaurant",
       "name": "Shop & Restaurant",
-      "count": 9
+      "count": 10
     },
     {
       "slug": "testing-qa",
@@ -16214,5 +16403,5 @@
       "count": 5
     }
   ],
-  "generatedAt": "2026-05-29T12:34:27.852Z"
+  "generatedAt": "2026-06-01T05:46:57.517Z"
 }
