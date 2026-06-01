@@ -1932,7 +1932,7 @@
       ],
       "author": "hotheadhacker",
       "version": "0.1.0",
-      "readingTime": 16,
+      "readingTime": 20,
       "headings": [
         {
           "depth": 1,
@@ -1948,6 +1948,11 @@
           "depth": 3,
           "text": "Distinct from automation/x-twitter-automation",
           "slug": "distinct-from-automation-x-twitter-automation"
+        },
+        {
+          "depth": 3,
+          "text": "Approval channel — Mercury vs everything else",
+          "slug": "approval-channel-mercury-vs-everything-else"
         },
         {
           "depth": 2,
@@ -2071,8 +2076,23 @@
         },
         {
           "depth": 2,
-          "text": "Telegram Approval Loop",
-          "slug": "telegram-approval-loop"
+          "text": "Approval Channel Resolution",
+          "slug": "approval-channel-resolution"
+        },
+        {
+          "depth": 3,
+          "text": "Resolution order",
+          "slug": "resolution-order"
+        },
+        {
+          "depth": 3,
+          "text": "Approval interface (transport-agnostic)",
+          "slug": "approval-interface-transport-agnostic"
+        },
+        {
+          "depth": 3,
+          "text": "Mercury-specific notes",
+          "slug": "mercury-specific-notes"
         },
         {
           "depth": 2,
@@ -2107,7 +2127,7 @@
       ],
       "excerpt": "> ## ⛔ EDUCATIONAL / RESEARCH USE ONLY > > **Twitter/X's [Developer Agreement](https://developer.x.com/en/developer-terms/agreement) and [Terms of Service](https://x.com/en/tos) prohibit automated account access outside of the official API.** This skill drives a real browser sess",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/automation/twitter-account-manager",
-      "updatedAt": "2026-06-01T11:51:40.550Z"
+      "updatedAt": "2026-06-01T12:15:01.001Z"
     },
     {
       "id": "automation/workflow-automation",
@@ -16603,5 +16623,5 @@
       "count": 5
     }
   ],
-  "generatedAt": "2026-06-01T11:51:51.056Z"
+  "generatedAt": "2026-06-01T12:15:01.879Z"
 }
