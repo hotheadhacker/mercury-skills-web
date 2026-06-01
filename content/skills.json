@@ -1910,6 +1910,206 @@
       "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
+      "id": "automation/twitter-account-manager",
+      "slug": "twitter-account-manager",
+      "category": "Automation",
+      "categorySlug": "automation",
+      "name": "twitter-account-manager",
+      "title": "Twitter Account Manager 🧪",
+      "description": "EDUCATIONAL / RESEARCH ONLY — Single-account always-on Twitter/X manager driven by cookies + headless Playwright. Runs a 10-minute scheduler that drafts posts, engages with timeline/search results, and queues anything risky for Telegram human approval. Hard daily ceilings, structural prompt-injection defenses, and DM auto-reply permanently disabled. Accounts WILL be terminated — we do not encourage use.",
+      "tags": [
+        "twitter",
+        "x",
+        "social-media",
+        "account-manager",
+        "playwright",
+        "cookies",
+        "scheduler",
+        "telegram-approval",
+        "prompt-injection-defense",
+        "educational",
+        "research"
+      ],
+      "author": "hotheadhacker",
+      "version": "0.1.0",
+      "readingTime": 16,
+      "headings": [
+        {
+          "depth": 1,
+          "text": "Twitter Account Manager 🧪",
+          "slug": "twitter-account-manager"
+        },
+        {
+          "depth": 2,
+          "text": "Overview",
+          "slug": "overview"
+        },
+        {
+          "depth": 3,
+          "text": "Distinct from automation/x-twitter-automation",
+          "slug": "distinct-from-automation-x-twitter-automation"
+        },
+        {
+          "depth": 2,
+          "text": "Architecture",
+          "slug": "architecture"
+        },
+        {
+          "depth": 2,
+          "text": "Installation",
+          "slug": "installation"
+        },
+        {
+          "depth": 2,
+          "text": "Configuration",
+          "slug": "configuration"
+        },
+        {
+          "depth": 3,
+          "text": "Heartbeat parsing + minimum enforcement",
+          "slug": "heartbeat-parsing-minimum-enforcement"
+        },
+        {
+          "depth": 2,
+          "text": "Persona",
+          "slug": "persona"
+        },
+        {
+          "depth": 3,
+          "text": "Authenticity guidance (built into the drafter system prompt)",
+          "slug": "authenticity-guidance-built-into-the-drafter-system-prompt"
+        },
+        {
+          "depth": 2,
+          "text": "L1 Fact-Check Loop",
+          "slug": "l1-fact-check-loop"
+        },
+        {
+          "depth": 3,
+          "text": "Failure behavior: Telegram approval",
+          "slug": "failure-behavior-telegram-approval"
+        },
+        {
+          "depth": 2,
+          "text": "Headless-by-default + --headed debug",
+          "slug": "headless-by-default-headed-debug"
+        },
+        {
+          "depth": 2,
+          "text": "Commands",
+          "slug": "commands"
+        },
+        {
+          "depth": 3,
+          "text": "login — one-time cookie capture",
+          "slug": "login-one-time-cookie-capture"
+        },
+        {
+          "depth": 3,
+          "text": "start — run the scheduler",
+          "slug": "start-run-the-scheduler"
+        },
+        {
+          "depth": 3,
+          "text": "stop, status, health",
+          "slug": "stop-status-health"
+        },
+        {
+          "depth": 3,
+          "text": "post \"text\" — one-off post",
+          "slug": "post-text-one-off-post"
+        },
+        {
+          "depth": 3,
+          "text": "engage — one-shot engagement cycle",
+          "slug": "engage-one-shot-engagement-cycle"
+        },
+        {
+          "depth": 2,
+          "text": "Safety Rails",
+          "slug": "safety-rails"
+        },
+        {
+          "depth": 3,
+          "text": "Hard daily ceilings (non-overridable)",
+          "slug": "hard-daily-ceilings-non-overridable"
+        },
+        {
+          "depth": 3,
+          "text": "DM auto-reply permanently disabled",
+          "slug": "dm-auto-reply-permanently-disabled"
+        },
+        {
+          "depth": 2,
+          "text": "Prompt-Injection Defense",
+          "slug": "prompt-injection-defense"
+        },
+        {
+          "depth": 3,
+          "text": "Layer 1: Structural wrapping",
+          "slug": "layer-1-structural-wrapping"
+        },
+        {
+          "depth": 3,
+          "text": "Layer 2: Regex deny-list (pre-filter)",
+          "slug": "layer-2-regex-deny-list-pre-filter"
+        },
+        {
+          "depth": 3,
+          "text": "Layer 3: Out-of-band intent check",
+          "slug": "layer-3-out-of-band-intent-check"
+        },
+        {
+          "depth": 3,
+          "text": "Layer 4: Hard rules baked into the drafter prompt",
+          "slug": "layer-4-hard-rules-baked-into-the-drafter-prompt"
+        },
+        {
+          "depth": 2,
+          "text": "Storage",
+          "slug": "storage"
+        },
+        {
+          "depth": 2,
+          "text": "Telegram Approval Loop",
+          "slug": "telegram-approval-loop"
+        },
+        {
+          "depth": 2,
+          "text": "Service Units",
+          "slug": "service-units"
+        },
+        {
+          "depth": 3,
+          "text": "macOS — launchd",
+          "slug": "macos-launchd"
+        },
+        {
+          "depth": 3,
+          "text": "Linux — systemd (user)",
+          "slug": "linux-systemd-user"
+        },
+        {
+          "depth": 2,
+          "text": "Reference Implementation (sketch)",
+          "slug": "reference-implementation-sketch"
+        },
+        {
+          "depth": 2,
+          "text": "Operational Notes",
+          "slug": "operational-notes"
+        },
+        {
+          "depth": 2,
+          "text": "Why this exists",
+          "slug": "why-this-exists"
+        }
+      ],
+      "excerpt": "> ## ⛔ EDUCATIONAL / RESEARCH USE ONLY > > **Twitter/X's [Developer Agreement](https://developer.x.com/en/developer-terms/agreement) and [Terms of Service](https://x.com/en/tos) prohibit automated account access outside of the official API.** This skill drives a real browser sess",
+      "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/automation/twitter-account-manager",
+      "updatedAt": "2026-06-01T11:51:40.550Z"
+    },
+    {
       "id": "automation/workflow-automation",
       "slug": "workflow-automation",
       "category": "Automation",
@@ -16295,7 +16495,7 @@
     {
       "slug": "automation",
       "name": "Automation",
-      "count": 4
+      "count": 5
     },
     {
       "slug": "backend",
@@ -16403,5 +16603,5 @@
       "count": 5
     }
   ],
-  "generatedAt": "2026-06-01T05:46:57.517Z"
+  "generatedAt": "2026-06-01T11:51:51.056Z"
 }
