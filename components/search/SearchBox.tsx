@@ -153,7 +153,7 @@ export default function SearchBox({
           onBlur={() => setTimeout(() => setOpen(false), 120)}
           onKeyDown={onKeyDown}
           placeholder={
-            isLg ? "Search 126 skills, tags, categories…" : "Search skills, tags, categories…"
+            isLg ? "Search skills, tags, categories…" : "Search skills, tags, categories…"
           }
           className={`flex-1 bg-transparent outline-none placeholder:text-[color:var(--color-fg-subtle)] ${
             isLg ? "text-lg" : "text-[15px]"

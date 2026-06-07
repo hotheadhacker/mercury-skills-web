@@ -28,13 +28,16 @@ export default async function HomePage() {
           <div className="flex flex-col items-center text-center gap-6 sm:gap-7 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 text-xs font-mono px-3 py-1 rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-bg-elev)] text-[color:var(--color-fg-muted)]">
               <Sparkles className="w-3 h-3" />
-              Curated agent capabilities
+              {allSkills.length} skills · {categories.length} categories
             </div>
             <h1 className="text-[2.25rem] sm:text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05] sm:leading-[1.02] [text-wrap:balance]">
               Skills for the
               <br />
               <span className="text-[color:var(--color-brand)]">Mercury Agent.</span>
             </h1>
+            <p className="text-sm text-[color:var(--color-fg-subtle)] -mt-2">
+              Compatible with Mercury, Claude Code, Codex CLI, OpenClaw, Hermes, Cursor, and Gemini CLI.
+            </p>
             <p className="text-base sm:text-lg md:text-xl text-[color:var(--color-fg-muted)] max-w-2xl leading-relaxed">
               A curated, open-source library of capabilities you can browse, bookmark, and install
               directly from the Mercury CLI.
