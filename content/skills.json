@@ -854,8 +854,8 @@
         "agent-memory",
         "personal-knowledge-graph"
       ],
-      "author": "Mayx07",
-      "authorUrl": "https://github.com/Mayx07",
+      "author": "myuxin007",
+      "authorUrl": "https://github.com/myuxin007",
       "version": "1.0.0",
       "readingTime": 2,
       "headings": [
@@ -907,7 +907,7 @@
       ],
       "excerpt": "> Organize books, people, concepts, and news items from conversations into a searchable, cross-referenced markdown knowledge base.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/ai-ml/gbrain-lite",
-      "updatedAt": "2026-05-25T15:56:03.000Z"
+      "updatedAt": "2026-06-07T04:42:34.456Z"
     },
     {
       "id": "ai-ml/memory-management",
@@ -1555,8 +1555,8 @@
         "knowledge-base",
         "speech-synthesis"
       ],
-      "author": "Mayx07",
-      "authorUrl": "https://github.com/Mayx07",
+      "author": "myuxin007",
+      "authorUrl": "https://github.com/myuxin007",
       "version": "1.0.0",
       "readingTime": 2,
       "headings": [
@@ -1628,7 +1628,7 @@
       ],
       "excerpt": "> Automatically collect, deduplicate, summarize, and synthesize a daily tech briefing as a warm-voiced MP3 every morning.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/automation/daily-briefing",
-      "updatedAt": "2026-05-25T15:56:03.000Z"
+      "updatedAt": "2026-06-07T04:42:34.456Z"
     },
     {
       "id": "automation/screenshot",
@@ -17302,5 +17302,5 @@
       "count": 5
     }
   ],
-  "generatedAt": "2026-06-07T04:38:52.997Z"
+  "generatedAt": "2026-06-07T04:42:39.950Z"
 }
