@@ -23,8 +23,8 @@ export default function SkillCard({ skill, stats }: Props) {
                 href={skill.authorUrl}
                 target="_blank"
                 rel="noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="inline-flex items-center gap-0.5 hover:text-[color:var(--color-fg-muted)] transition-colors"
+                className="inline-flex items-center gap-0.5 hover:text-[color:var(--color-fg-muted)] transition-colors pointer-events-auto"
+                style={{ position: "relative", zIndex: 1 }}
               >
                 <User className="w-2.5 h-2.5" /> {skill.author}
               </a>
