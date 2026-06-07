@@ -12141,6 +12141,181 @@
       "updatedAt": "2026-06-07T04:38:47.716Z"
     },
     {
+      "id": "media-download/github-repo-tour",
+      "slug": "github-repo-tour",
+      "category": "Media",
+      "categorySlug": "media-download",
+      "name": "github-repo-tour",
+      "title": "GitHub Repo Tour — Scrolling Video with Synced Narration & Subtitles",
+      "description": "Generate a 15-30 second scrolling video tour of any GitHub repository page with ElevenLabs AI narration and word-by-word subtitle sync. Captures a full-page mobile-viewport screenshot, scrolls top-to-bottom with GSAP, and burns synced subtitles onto the final MP4 using HyperFrames CLI.",
+      "tags": [
+        "hyperframes",
+        "video-generation",
+        "github",
+        "scrolling",
+        "subtitles",
+        "caption",
+        "elevenlabs",
+        "voiceover",
+        "instagram-reels",
+        "tts"
+      ],
+      "author": "hotheadhacker",
+      "authorUrl": "https://github.com/hotheadhacker",
+      "version": "1.0.0",
+      "readingTime": 11,
+      "headings": [
+        {
+          "depth": 1,
+          "text": "GitHub Repo Tour — Scrolling Video with Synced Narration & Subtitles",
+          "slug": "github-repo-tour-scrolling-video-with-synced-narration-subtitles"
+        },
+        {
+          "depth": 2,
+          "text": "What This Skill Produces",
+          "slug": "what-this-skill-produces"
+        },
+        {
+          "depth": 2,
+          "text": "Core Decisions",
+          "slug": "core-decisions"
+        },
+        {
+          "depth": 2,
+          "text": "Directory Structure",
+          "slug": "directory-structure"
+        },
+        {
+          "depth": 2,
+          "text": "Workflow",
+          "slug": "workflow"
+        },
+        {
+          "depth": 3,
+          "text": "Step 0: Capture Repo Info & Screenshot",
+          "slug": "step-0-capture-repo-info-screenshot"
+        },
+        {
+          "depth": 3,
+          "text": "Step 1: Write the Narration Script",
+          "slug": "step-1-write-the-narration-script"
+        },
+        {
+          "depth": 3,
+          "text": "Step 2: Generate Voiceover via ElevenLabs",
+          "slug": "step-2-generate-voiceover-via-elevenlabs"
+        },
+        {
+          "depth": 3,
+          "text": "Step 3: Transcribe & Time-Map",
+          "slug": "step-3-transcribe-time-map"
+        },
+        {
+          "depth": 3,
+          "text": "Step 4: Build the HyperFrames Composition",
+          "slug": "step-4-build-the-hyperframes-composition"
+        },
+        {
+          "depth": 3,
+          "text": "Step 5: Render",
+          "slug": "step-5-render"
+        },
+        {
+          "depth": 3,
+          "text": "Step 6: Deliver",
+          "slug": "step-6-deliver"
+        },
+        {
+          "depth": 2,
+          "text": "Subtitle System — How It Works",
+          "slug": "subtitle-system-how-it-works"
+        },
+        {
+          "depth": 3,
+          "text": "Word-Level Timestamps",
+          "slug": "word-level-timestamps"
+        },
+        {
+          "depth": 3,
+          "text": "Three Visual States",
+          "slug": "three-visual-states"
+        },
+        {
+          "depth": 3,
+          "text": "Typography",
+          "slug": "typography"
+        },
+        {
+          "depth": 3,
+          "text": "Layout Considerations",
+          "slug": "layout-considerations"
+        },
+        {
+          "depth": 2,
+          "text": "Scroll Mechanics",
+          "slug": "scroll-mechanics"
+        },
+        {
+          "depth": 3,
+          "text": "Full-Screen Mobile Viewport",
+          "slug": "full-screen-mobile-viewport"
+        },
+        {
+          "depth": 3,
+          "text": "Smooth Continuous Scroll",
+          "slug": "smooth-continuous-scroll"
+        },
+        {
+          "depth": 2,
+          "text": "Narration-Aware Timing (MANDATORY)",
+          "slug": "narration-aware-timing-mandatory"
+        },
+        {
+          "depth": 2,
+          "text": "Color Scheme (GitHub Dark)",
+          "slug": "color-scheme-github-dark"
+        },
+        {
+          "depth": 2,
+          "text": "Variations",
+          "slug": "variations"
+        },
+        {
+          "depth": 3,
+          "text": "Landscape (1920x1080)",
+          "slug": "landscape-1920x1080"
+        },
+        {
+          "depth": 3,
+          "text": "With Background Music",
+          "slug": "with-background-music"
+        },
+        {
+          "depth": 3,
+          "text": "Multiple Repos in One Video",
+          "slug": "multiple-repos-in-one-video"
+        },
+        {
+          "depth": 2,
+          "text": "Prerequisites",
+          "slug": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "text": "Troubleshooting",
+          "slug": "troubleshooting"
+        },
+        {
+          "depth": 2,
+          "text": "Skill Dependency",
+          "slug": "skill-dependency"
+        }
+      ],
+      "excerpt": "> **Depends on:** [website-to-hyperframes](https://github.com/heygen-com/hyperframes/blob/main/skills/website-to-hyperframes/SKILL.md) — load it before starting. Its 6-step workflow and reference files apply here. This skill specializes that workflow for single-page scrolling tou",
+      "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/media-download/github-repo-tour",
+      "updatedAt": "2026-06-07T12:44:29.343Z"
+    },
+    {
       "id": "media-download/legal-downloading",
       "slug": "legal-downloading",
       "category": "Media",
@@ -17259,7 +17434,7 @@
     {
       "slug": "media-download",
       "name": "Media",
-      "count": 5
+      "count": 6
     },
     {
       "slug": "mobile",
@@ -17302,5 +17477,5 @@
       "count": 5
     }
   ],
-  "generatedAt": "2026-06-07T04:42:39.950Z"
+  "generatedAt": "2026-06-07T12:44:30.273Z"
 }
