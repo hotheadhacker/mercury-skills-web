@@ -11962,6 +11962,185 @@
       "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
+      "id": "media-download/github-repo-promo",
+      "slug": "github-repo-promo",
+      "category": "Media",
+      "categorySlug": "media-download",
+      "name": "github-repo-promo",
+      "title": "GitHub Repo Promo Video",
+      "description": "Generate 1080x1920 Instagram Reels video promos for GitHub repositories using HyperFrames. 7-beat structure with fullscreen scrolling phone mockup, GSAP animations, dark GitHub theme, repo stats, ElevenLabs AI voiceover synced to scroll duration, and follow CTA. Depends on the website-to-hyperframes skill for HyperFrames composition patterns.",
+      "tags": [
+        "hyperframes",
+        "video-generation",
+        "github",
+        "promo",
+        "instagram-reels",
+        "gsap",
+        "elevenlabs",
+        "voiceover",
+        "social-media"
+      ],
+      "author": "hotheadhacker",
+      "authorUrl": "https://github.com/hotheadhacker",
+      "version": "1.0.0",
+      "readingTime": 11,
+      "headings": [
+        {
+          "depth": 1,
+          "text": "GitHub Repo Promo Video",
+          "slug": "github-repo-promo-video"
+        },
+        {
+          "depth": 2,
+          "text": "Core Decisions",
+          "slug": "core-decisions"
+        },
+        {
+          "depth": 2,
+          "text": "Directory Structure",
+          "slug": "directory-structure"
+        },
+        {
+          "depth": 2,
+          "text": "Workflow",
+          "slug": "workflow"
+        },
+        {
+          "depth": 3,
+          "text": "Step 0: Capture Repo Info",
+          "slug": "step-0-capture-repo-info"
+        },
+        {
+          "depth": 3,
+          "text": "Step 1: Brand Identity",
+          "slug": "step-1-brand-identity"
+        },
+        {
+          "depth": 3,
+          "text": "Step 2: Strategy & Brief 💬",
+          "slug": "step-2-strategy-brief"
+        },
+        {
+          "depth": 3,
+          "text": "Step 3: Storyboard + Script 💬",
+          "slug": "step-3-storyboard-script"
+        },
+        {
+          "depth": 4,
+          "text": "7-Beat Structure (MANDATORY)",
+          "slug": "7-beat-structure-mandatory"
+        },
+        {
+          "depth": 4,
+          "text": "Timing from narration",
+          "slug": "timing-from-narration"
+        },
+        {
+          "depth": 3,
+          "text": "Step 4: Voiceover Generation 💬",
+          "slug": "step-4-voiceover-generation"
+        },
+        {
+          "depth": 3,
+          "text": "Step 5: Build Compositions",
+          "slug": "step-5-build-compositions"
+        },
+        {
+          "depth": 4,
+          "text": "Mandatory architecture",
+          "slug": "mandatory-architecture"
+        },
+        {
+          "depth": 4,
+          "text": "Fullscreen phone mockup (Beat 2)",
+          "slug": "fullscreen-phone-mockup-beat-2"
+        },
+        {
+          "depth": 4,
+          "text": "GSAP timeline",
+          "slug": "gsap-timeline"
+        },
+        {
+          "depth": 3,
+          "text": "Step 6: Validate & Deliver",
+          "slug": "step-6-validate-deliver"
+        },
+        {
+          "depth": 2,
+          "text": "Seven Beats — Detailed Specifications",
+          "slug": "seven-beats-detailed-specifications"
+        },
+        {
+          "depth": 3,
+          "text": "Beat 1: Hero (0s → ~4s)",
+          "slug": "beat-1-hero-0s-4s"
+        },
+        {
+          "depth": 3,
+          "text": "Beat 2: Fullscreen Scrollable Phone (~4s → ~15s)",
+          "slug": "beat-2-fullscreen-scrollable-phone-4s-15s"
+        },
+        {
+          "depth": 3,
+          "text": "Beat 3: Stats (~15s → ~19s)",
+          "slug": "beat-3-stats-15s-19s"
+        },
+        {
+          "depth": 3,
+          "text": "Beat 4: What You Can Build (~19s → ~23s)",
+          "slug": "beat-4-what-you-can-build-19s-23s"
+        },
+        {
+          "depth": 3,
+          "text": "Beat 5: Stars Highlight (~23s → ~27s)",
+          "slug": "beat-5-stars-highlight-23s-27s"
+        },
+        {
+          "depth": 3,
+          "text": "Beat 6: CTA (~27s → ~31s)",
+          "slug": "beat-6-cta-27s-31s"
+        },
+        {
+          "depth": 3,
+          "text": "Beat 7: Follow (~31s → ~33s)",
+          "slug": "beat-7-follow-31s-33s"
+        },
+        {
+          "depth": 2,
+          "text": "Narration-Aware Scroll Sync",
+          "slug": "narration-aware-scroll-sync"
+        },
+        {
+          "depth": 3,
+          "text": "How to write narration-aware scripts",
+          "slug": "how-to-write-narration-aware-scripts"
+        },
+        {
+          "depth": 3,
+          "text": "Example: narration-aware script",
+          "slug": "example-narration-aware-script"
+        },
+        {
+          "depth": 2,
+          "text": "Prerequisites",
+          "slug": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "text": "Troubleshooting",
+          "slug": "troubleshooting"
+        },
+        {
+          "depth": 2,
+          "text": "Skill Dependency",
+          "slug": "skill-dependency"
+        }
+      ],
+      "excerpt": "> **Depends on:** [website-to-hyperframes](https://github.com/heygen-com/hyperframes/blob/main/skills/website-to-hyperframes/SKILL.md) — load it before starting. Its 6-step workflow (capture → brand → brief → storyboard → build → validate) and all reference files apply here. This",
+      "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/media-download/github-repo-promo",
+      "updatedAt": "2026-06-07T04:38:47.716Z"
+    },
+    {
       "id": "media-download/legal-downloading",
       "slug": "legal-downloading",
       "category": "Media",
@@ -17080,7 +17259,7 @@
     {
       "slug": "media-download",
       "name": "Media",
-      "count": 4
+      "count": 5
     },
     {
       "slug": "mobile",
@@ -17123,5 +17302,5 @@
       "count": 5
     }
   ],
-  "generatedAt": "2026-06-07T04:15:24.780Z"
+  "generatedAt": "2026-06-07T04:38:52.997Z"
 }

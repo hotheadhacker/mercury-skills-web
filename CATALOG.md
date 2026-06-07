@@ -153,7 +153,7 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 | Workflow Automation | Workflow design, n8n patterns, triggers | [SKILL.md](./categories/automation/workflow-automation/SKILL.md) |
 | Shell Scripting | Scripting best practices, error handling | [SKILL.md](./categories/automation/shell-scripting/SKILL.md) |
 | Web Scraping | Playwright/Puppeteer patterns, anti-detection, pagination, data extraction, and rate limiting | [SKILL.md](./categories/automation/web-scraping/SKILL.md) |
-| X/Twitter Automation | Safe tweet search, reply reads, monitoring, and action-gated posting workflows with Hermes Tweet | [SKILL.md](./categories/automation/x-twitter-automation/SKILL.md) |
+| X/Twitter Automation | Safe tweet search, reply reads, monitoring, and action-gated posting workflows with TweetClaw for OpenClaw and Hermes Tweet for Hermes Agent | [SKILL.md](./categories/automation/x-twitter-automation/SKILL.md) |
 | Twitter Account Manager | EDUCATIONAL/RESEARCH ONLY — single-account always-on browser-based X manager (cookies + headless Playwright); Telegram approval, hard daily ceilings, prompt-injection defenses, DM auto-reply disabled | [SKILL.md](./categories/automation/twitter-account-manager/SKILL.md) |
 | Test Automation | Framework selection, page object model, data-driven testing, parallel execution, and CI integration | [SKILL.md](./categories/automation/test-automation/SKILL.md) |
 | Data Sync | ETL patterns, change data capture, API sync, file-based sync, and conflict resolution | [SKILL.md](./categories/automation/data-sync/SKILL.md) |
@@ -267,8 +267,18 @@ These skills work with [Mercury Agent](https://github.com/cosmicstack-labs/mercu
 |-------|-------------|------|
 | any2pdf | Markdown → publication-quality PDF with reportlab; CJK/Latin mixed text, 10 themes, cover pages, watermarks, callouts, formulas — adapted from [lovstudio/any2pdf](https://github.com/lovstudio/any2pdf) (MIT) | [SKILL.md](./categories/pdf-generation/any2pdf/SKILL.md) |
 
+## Media Download
+
+| Skill | Description | File |
+|-------|-------------|------|
+| GitHub Repo Promo | 1080x1920 Instagram Reels video promos for GitHub repos using HyperFrames — fullscreen scrolling phone mockup, narration-aware GSAP beat sync, dark GitHub theme, ElevenLabs AI voiceover, stats and follow CTA | [SKILL.md](./categories/media-download/github-repo-promo/SKILL.md) |
+| Video Downloader | yt-dlp wrappers, format selection, playlist handling, and post-processing | [SKILL.md](./categories/media-download/video-downloader/SKILL.md) |
+| Audio Extraction | Extract audio from video, batch processing, and format conversion | [SKILL.md](./categories/media-download/audio-extraction/SKILL.md) |
+| Playlist Archiver | Batch download playlists, metadata preservation, and organization | [SKILL.md](./categories/media-download/playlist-archiver/SKILL.md) |
+| Legal Downloading | Copyright awareness, fair use, and legal downloading practices | [SKILL.md](./categories/media-download/legal-downloading/SKILL.md) |
+
 ---
 
-*Total: 130+ skills across 20 categories*
+*Total: 131 skills across 23 categories*
 
 Want to add a skill? See [CONTRIBUTING.md](./CONTRIBUTING.md).
