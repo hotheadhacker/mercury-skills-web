@@ -66,6 +66,7 @@ export interface SkillIndexEntry {
   description: string;
   tags: string[];
   author?: string;
+  authorUrl?: string;
   version?: string;
   icon?: string;
   readingTime: number;
@@ -215,6 +216,7 @@ function build() {
     const description = String(data.description ?? "").replace(/^['"]|['"]$/g, "").trim();
     const tags = normalizeTags(meta.tags ?? data.tags);
     const author = meta.author ? String(meta.author) : undefined;
+    const authorUrl = author ? `https://github.com/${author}` : undefined;
     const version = meta.version ? String(meta.version) : undefined;
     const icon = data.icon ? String(data.icon) : undefined;
 
@@ -233,6 +235,7 @@ function build() {
       description: description || excerpt,
       tags,
       author,
+      authorUrl,
       version,
       icon,
       readingTime,

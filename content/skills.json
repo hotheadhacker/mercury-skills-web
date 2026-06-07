@@ -18,6 +18,7 @@
         "governance"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 10,
       "headings": [
@@ -128,6 +129,7 @@
         "agent-communication"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 7,
       "headings": [
@@ -228,6 +230,7 @@
         "production-agents"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 6,
       "headings": [
@@ -343,6 +346,7 @@
         "scaling"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 6,
       "headings": [
@@ -439,6 +443,7 @@
         "llm"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 13,
       "headings": [
@@ -744,6 +749,7 @@
         "graceful-degradation"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 8,
       "headings": [
@@ -849,6 +855,7 @@
         "personal-knowledge-graph"
       ],
       "author": "Mayx07",
+      "authorUrl": "https://github.com/Mayx07",
       "version": "1.0.0",
       "readingTime": 2,
       "headings": [
@@ -920,6 +927,7 @@
         "memory-consolidation"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 8,
       "headings": [
@@ -1025,6 +1033,7 @@
         "ai-patterns"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 11,
       "headings": [
@@ -1320,6 +1329,7 @@
         "llm-ops"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 6,
       "headings": [
@@ -1435,6 +1445,7 @@
         "resource-management"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 8,
       "headings": [
@@ -1545,6 +1556,7 @@
         "speech-synthesis"
       ],
       "author": "Mayx07",
+      "authorUrl": "https://github.com/Mayx07",
       "version": "1.0.0",
       "readingTime": 2,
       "headings": [
@@ -1619,6 +1631,237 @@
       "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
+      "id": "automation/screenshot",
+      "slug": "screenshot",
+      "category": "Automation",
+      "categorySlug": "automation",
+      "name": "screenshot",
+      "title": "Screenshot Skill",
+      "description": "Capture high-fidelity screenshots of any website using Playwright — supports custom viewports, dark/light mode, mobile/tablet/desktop presets, split-screen, element-based capture by CSS selector, and text-based area capture. Integrates with Telegram or any output channel for delivery.",
+      "tags": [
+        "playwright",
+        "screenshot",
+        "browser-automation",
+        "web-capture",
+        "testing",
+        "selenium"
+      ],
+      "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
+      "version": "2.0.0",
+      "readingTime": 17,
+      "headings": [
+        {
+          "depth": 1,
+          "text": "Screenshot Skill",
+          "slug": "screenshot-skill"
+        },
+        {
+          "depth": 2,
+          "text": "Core Principles",
+          "slug": "core-principles"
+        },
+        {
+          "depth": 3,
+          "text": "1. Wait for the Right Moment",
+          "slug": "1-wait-for-the-right-moment"
+        },
+        {
+          "depth": 3,
+          "text": "2. Match the Viewport to the Use Case",
+          "slug": "2-match-the-viewport-to-the-use-case"
+        },
+        {
+          "depth": 3,
+          "text": "3. Respect Rate Limits and Server Load",
+          "slug": "3-respect-rate-limits-and-server-load"
+        },
+        {
+          "depth": 3,
+          "text": "4. Handle JS-Heavy Pages",
+          "slug": "4-handle-js-heavy-pages"
+        },
+        {
+          "depth": 3,
+          "text": "5. Capture Only What Matters",
+          "slug": "5-capture-only-what-matters"
+        },
+        {
+          "depth": 2,
+          "text": "Installation and Setup",
+          "slug": "installation-and-setup"
+        },
+        {
+          "depth": 3,
+          "text": "Prerequisites",
+          "slug": "prerequisites"
+        },
+        {
+          "depth": 3,
+          "text": "Verify Installation",
+          "slug": "verify-installation"
+        },
+        {
+          "depth": 2,
+          "text": "Quick Start — Basic Screenshot",
+          "slug": "quick-start-basic-screenshot"
+        },
+        {
+          "depth": 2,
+          "text": "Viewport Presets",
+          "slug": "viewport-presets"
+        },
+        {
+          "depth": 3,
+          "text": "Mobile Viewports",
+          "slug": "mobile-viewports"
+        },
+        {
+          "depth": 3,
+          "text": "Tablet Viewports",
+          "slug": "tablet-viewports"
+        },
+        {
+          "depth": 3,
+          "text": "Desktop Viewports",
+          "slug": "desktop-viewports"
+        },
+        {
+          "depth": 2,
+          "text": "Display Mode — Dark Mode & Light Mode",
+          "slug": "display-mode-dark-mode-light-mode"
+        },
+        {
+          "depth": 3,
+          "text": "Dark Mode Screenshot",
+          "slug": "dark-mode-screenshot"
+        },
+        {
+          "depth": 3,
+          "text": "Light Mode Screenshot",
+          "slug": "light-mode-screenshot"
+        },
+        {
+          "depth": 3,
+          "text": "Dual Mode (Both in One Shot)",
+          "slug": "dual-mode-both-in-one-shot"
+        },
+        {
+          "depth": 2,
+          "text": "Custom Dimensions",
+          "slug": "custom-dimensions"
+        },
+        {
+          "depth": 2,
+          "text": "Full-Page Screenshots",
+          "slug": "full-page-screenshots"
+        },
+        {
+          "depth": 2,
+          "text": "Element-Based Capture (Capture a Specific Div)",
+          "slug": "element-based-capture-capture-a-specific-div"
+        },
+        {
+          "depth": 2,
+          "text": "Text-Based Area Capture",
+          "slug": "text-based-area-capture"
+        },
+        {
+          "depth": 3,
+          "text": "Advanced: Capture Multiple Text Matches",
+          "slug": "advanced-capture-multiple-text-matches"
+        },
+        {
+          "depth": 2,
+          "text": "Split-Screen Screenshots",
+          "slug": "split-screen-screenshots"
+        },
+        {
+          "depth": 3,
+          "text": "Side-by-Side Viewports (Single Browser, Two Pages)",
+          "slug": "side-by-side-viewports-single-browser-two-pages"
+        },
+        {
+          "depth": 3,
+          "text": "Split URLs (Two Different Pages Side-by-Side)",
+          "slug": "split-urls-two-different-pages-side-by-side"
+        },
+        {
+          "depth": 3,
+          "text": "Without ImageMagick: Pure CSS Canvas Approach",
+          "slug": "without-imagemagick-pure-css-canvas-approach"
+        },
+        {
+          "depth": 2,
+          "text": "Unified Screenshot Function",
+          "slug": "unified-screenshot-function"
+        },
+        {
+          "depth": 2,
+          "text": "Delivery Integration — Send Screenshots to the User",
+          "slug": "delivery-integration-send-screenshots-to-the-user"
+        },
+        {
+          "depth": 3,
+          "text": "Agent Integration Pattern",
+          "slug": "agent-integration-pattern"
+        },
+        {
+          "depth": 3,
+          "text": "Deliver After Capture",
+          "slug": "deliver-after-capture"
+        },
+        {
+          "depth": 3,
+          "text": "Batch Delivery (Multiple Screenshots at Once)",
+          "slug": "batch-delivery-multiple-screenshots-at-once"
+        },
+        {
+          "depth": 3,
+          "text": "Cleanup After Delivery",
+          "slug": "cleanup-after-delivery"
+        },
+        {
+          "depth": 3,
+          "text": "Agent Flow Summary",
+          "slug": "agent-flow-summary"
+        },
+        {
+          "depth": 2,
+          "text": "Wait Strategies",
+          "slug": "wait-strategies"
+        },
+        {
+          "depth": 3,
+          "text": "Handling Lazy-Loaded Content",
+          "slug": "handling-lazy-loaded-content"
+        },
+        {
+          "depth": 2,
+          "text": "Batch Screenshots (Multiple URLs)",
+          "slug": "batch-screenshots-multiple-urls"
+        },
+        {
+          "depth": 2,
+          "text": "Skill Maturity Model",
+          "slug": "skill-maturity-model"
+        },
+        {
+          "depth": 2,
+          "text": "Common Mistakes",
+          "slug": "common-mistakes"
+        },
+        {
+          "depth": 2,
+          "text": "Trigger Phrases",
+          "slug": "trigger-phrases"
+        }
+      ],
+      "excerpt": "Capture high-fidelity screenshots of any website using Playwright — the industry-standard browser automation framework. This skill covers viewport presets (mobile, tablet, desktop), dark/light mode, full-page captures, custom dimensions, element-level capture by CSS selector, tex",
+      "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/automation/screenshot",
+      "updatedAt": "2026-06-07T04:14:57.304Z"
+    },
+    {
       "id": "automation/shell-scripting",
       "slug": "shell-scripting",
       "category": "Automation",
@@ -1636,6 +1879,7 @@
         "automation"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 15,
       "headings": [
@@ -1931,6 +2175,7 @@
         "research"
       ],
       "author": "hotheadhacker",
+      "authorUrl": "https://github.com/hotheadhacker",
       "version": "0.1.0",
       "readingTime": 20,
       "headings": [
@@ -2147,6 +2392,7 @@
         "monitoring"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 12,
       "headings": [
@@ -2410,11 +2656,14 @@
         "monitoring",
         "posting",
         "agent-tools",
+        "openclaw",
+        "tweetclaw",
         "hermes-agent"
       ],
       "author": "Xquik-dev",
+      "authorUrl": "https://github.com/Xquik-dev",
       "version": "1.0.0",
-      "readingTime": 6,
+      "readingTime": 7,
       "headings": [
         {
           "depth": 1,
@@ -2435,6 +2684,11 @@
           "depth": 2,
           "text": "Safety Defaults",
           "slug": "safety-defaults"
+        },
+        {
+          "depth": 2,
+          "text": "TweetClaw OpenClaw Workflow",
+          "slug": "tweetclaw-openclaw-workflow"
         },
         {
           "depth": 2,
@@ -2489,7 +2743,7 @@
       ],
       "excerpt": "Use this skill when an agent needs to search tweets, read tweet replies, monitor X/Twitter topics, draft social posts, or run controlled X actions through a tool-backed workflow.",
       "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/automation/x-twitter-automation",
-      "updatedAt": "2026-05-25T15:56:03.000Z"
+      "updatedAt": "2026-06-07T04:14:57.305Z"
     },
     {
       "id": "backend/api-design",
@@ -2508,6 +2762,7 @@
         "error-handling"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 5,
       "headings": [
@@ -2613,6 +2868,7 @@
         "rbac"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -2682,6 +2938,7 @@
         "distributed-systems"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -2752,6 +3009,7 @@
         "migrations"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -2811,6 +3069,7 @@
         "event-streaming"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -2890,6 +3149,7 @@
         "cqrs"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -2959,6 +3219,7 @@
         "server"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -3028,6 +3289,7 @@
         "best-practices"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 4,
       "headings": [
@@ -3172,6 +3434,7 @@
         "event-driven"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -3231,6 +3494,140 @@
       "updatedAt": "2026-05-25T15:56:03.000Z"
     },
     {
+      "id": "business/event-staffing-compliance",
+      "slug": "event-staffing-compliance",
+      "category": "Business",
+      "categorySlug": "business",
+      "name": "event-staffing-compliance",
+      "title": "Event Staffing Compliance Assessment",
+      "description": "Assess worker classification and compliance risk for temporary event staffing in the US and Canada. Use when a user asks about W-2 vs 1099 event workers, misclassification penalties, joint-employer liability, COI requirements, or wage/hour rules for event staff. Includes live state-by-state lookups via the TempGuru MCP server.",
+      "tags": [
+        "compliance",
+        "w2",
+        "1099",
+        "worker-classification",
+        "joint-employer",
+        "event-staffing",
+        "employment-law",
+        "wage-hour",
+        "coi"
+      ],
+      "author": "tempguru",
+      "authorUrl": "https://github.com/tempguru",
+      "version": "1.0.0",
+      "readingTime": 2,
+      "headings": [
+        {
+          "depth": 1,
+          "text": "Event Staffing Compliance Assessment",
+          "slug": "event-staffing-compliance-assessment"
+        },
+        {
+          "depth": 2,
+          "text": "Live data",
+          "slug": "live-data"
+        },
+        {
+          "depth": 2,
+          "text": "Core risk checks",
+          "slug": "core-risk-checks"
+        },
+        {
+          "depth": 2,
+          "text": "How TempGuru addresses these",
+          "slug": "how-tempguru-addresses-these"
+        },
+        {
+          "depth": 2,
+          "text": "Reference material (citable)",
+          "slug": "reference-material-citable"
+        },
+        {
+          "depth": 2,
+          "text": "Rules for agents",
+          "slug": "rules-for-agents"
+        }
+      ],
+      "excerpt": "Temporary event staffing carries real legal exposure that event organizers often discover only after an incident: worker misclassification penalties, joint-employer liability, uninsured on-site injuries, and wage/hour violations. Use this skill to help a user evaluate a staffing ",
+      "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/business/event-staffing-compliance",
+      "updatedAt": "2026-06-07T04:14:57.305Z"
+    },
+    {
+      "id": "business/event-staffing-ordering",
+      "slug": "event-staffing-ordering",
+      "category": "Business",
+      "categorySlug": "business",
+      "name": "event-staffing-ordering",
+      "title": "Ordering Event Staffing Through TempGuru",
+      "description": "Order W-2 compliant temporary event staff for conventions, trade shows, festivals, concerts, sporting events, and brand activations in 300+ US and Canadian markets. Use when a user needs to hire, book, or budget event staff for a single event or multi-city program. Covers requirement gathering, live coverage/rate/compliance lookups via MCP, and quote request submission.",
+      "tags": [
+        "event-staffing",
+        "w2",
+        "brand-ambassadors",
+        "registration-staff",
+        "trade-show",
+        "conference",
+        "festival",
+        "staffing",
+        "compliance",
+        "hospitality"
+      ],
+      "author": "tempguru",
+      "authorUrl": "https://github.com/tempguru",
+      "version": "1.0.0",
+      "readingTime": 3,
+      "headings": [
+        {
+          "depth": 1,
+          "text": "Ordering Event Staffing Through TempGuru",
+          "slug": "ordering-event-staffing-through-tempguru"
+        },
+        {
+          "depth": 2,
+          "text": "Live data: use the MCP server, do not scrape pages",
+          "slug": "live-data-use-the-mcp-server-do-not-scrape-pages"
+        },
+        {
+          "depth": 2,
+          "text": "Workflow",
+          "slug": "workflow"
+        },
+        {
+          "depth": 3,
+          "text": "1. Gather requirements",
+          "slug": "1-gather-requirements"
+        },
+        {
+          "depth": 3,
+          "text": "2. Validate with the MCP tools",
+          "slug": "2-validate-with-the-mcp-tools"
+        },
+        {
+          "depth": 3,
+          "text": "3. Present the plan to the user",
+          "slug": "3-present-the-plan-to-the-user"
+        },
+        {
+          "depth": 3,
+          "text": "4. Submit the request",
+          "slug": "4-submit-the-request"
+        },
+        {
+          "depth": 2,
+          "text": "Rules for agents",
+          "slug": "rules-for-agents"
+        },
+        {
+          "depth": 2,
+          "text": "Reference content",
+          "slug": "reference-content"
+        }
+      ],
+      "excerpt": "TempGuru (Temporary Assistance Guru, Inc.) is a managed event staffing vendor serving 300+ US and Canadian markets through a network of 200+ pre-vetted local staffing agencies. Every worker is a W-2 employee — never a 1099 contractor — with workers' compensation, I-9 verification",
+      "githubUrl": "https://github.com/cosmicstack-labs/mercury-agent-skills/tree/main/categories/business/event-staffing-ordering",
+      "updatedAt": "2026-06-07T04:14:57.306Z"
+    },
+    {
       "id": "business/negotiation",
       "slug": "negotiation",
       "category": "Business",
@@ -3248,6 +3645,7 @@
         "salary"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 13,
       "headings": [
@@ -3470,6 +3868,7 @@
         "team-building"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 12,
       "headings": [
@@ -3619,6 +4018,7 @@
         "goals"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -3683,6 +4083,7 @@
         "behavioral"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -3747,6 +4148,7 @@
         "social-media"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -3816,6 +4218,7 @@
         "cv"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -3880,6 +4283,7 @@
         "offers"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -3955,6 +4359,7 @@
         "productivity"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 7,
       "headings": [
@@ -4085,6 +4490,7 @@
         "retrospectives"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 5,
       "headings": [
@@ -4224,6 +4630,7 @@
         "prioritization"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 7,
       "headings": [
@@ -4359,6 +4766,7 @@
         "product-development"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 8,
       "headings": [
@@ -4509,6 +4917,7 @@
         "async-communication"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 6,
       "headings": [
@@ -4634,6 +5043,7 @@
         "freelancing"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 8,
       "headings": [
@@ -4794,6 +5204,7 @@
         "frameworks"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 6,
       "headings": [
@@ -4924,6 +5335,7 @@
         "focus"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 9,
       "headings": [
@@ -5084,6 +5496,7 @@
         "medallion-architecture"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 13,
       "headings": [
@@ -5348,6 +5761,7 @@
         "accessibility-testing"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 14,
       "headings": [
@@ -5627,6 +6041,7 @@
         "design-governance"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 10,
       "headings": [
@@ -5901,6 +6316,7 @@
         "api-reference"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 15,
       "headings": [
@@ -6050,6 +6466,7 @@
         "governance"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 10,
       "headings": [
@@ -6214,6 +6631,7 @@
         "maintainability"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 5,
       "headings": [
@@ -6313,6 +6731,7 @@
         "automation"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 9,
       "headings": [
@@ -6507,6 +6926,7 @@
         "observability"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 10,
       "headings": [
@@ -6661,6 +7081,7 @@
         "upgrades"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -6725,6 +7146,7 @@
         "automation"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 10,
       "headings": [
@@ -6899,6 +7321,7 @@
         "collaboration"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 5,
       "headings": [
@@ -7038,6 +7461,7 @@
         "transitions"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 8,
       "headings": [
@@ -7200,6 +7624,7 @@
         "ffmpeg"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 3,
       "headings": [
@@ -7278,6 +7703,7 @@
         "captions"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 4,
       "headings": [
@@ -7387,6 +7813,7 @@
         "documentation"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 14,
       "headings": [
@@ -7616,6 +8043,7 @@
         "documentation"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 15,
       "headings": [
@@ -7900,6 +8328,7 @@
         "modernization"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 2,
       "headings": [
@@ -7954,6 +8383,7 @@
         "guides"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 12,
       "headings": [
@@ -8139,6 +8569,7 @@
         "mutation-testing"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 9,
       "headings": [
@@ -8305,6 +8736,7 @@
         "pipelines"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 8,
       "headings": [
@@ -8416,6 +8848,7 @@
         "dr"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -8488,6 +8921,7 @@
         "multi-stage-builds"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 6,
       "headings": [
@@ -8577,6 +9011,7 @@
         "orchestration"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -8652,6 +9087,7 @@
         "tracing"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -8731,6 +9167,7 @@
         "postmortem"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -8805,6 +9242,7 @@
         "devops"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -8874,6 +9312,7 @@
         "feedback"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -8989,6 +9428,7 @@
         "education"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -9068,6 +9508,7 @@
         "training"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -9137,6 +9578,7 @@
         "instruction"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -9206,6 +9648,7 @@
         "variance"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -9265,6 +9708,7 @@
         "compliance"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -9324,6 +9768,7 @@
         "forecasting"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -9389,6 +9834,7 @@
         "data-protection"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -9448,6 +9894,7 @@
         "business-continuity"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -9518,6 +9965,7 @@
         "storybook"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -9564,6 +10012,7 @@
         "accessibility"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 2,
       "headings": [
@@ -9631,6 +10080,7 @@
         "isr"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 5,
       "headings": [
@@ -9740,6 +10190,7 @@
         "components"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 5,
       "headings": [
@@ -9880,6 +10331,7 @@
         "tailwind"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -9931,6 +10383,7 @@
         "frontend-architecture"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 2,
       "headings": [
@@ -9995,6 +10448,7 @@
         "styling"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 4,
       "headings": [
@@ -10130,6 +10584,7 @@
         "core-web-vitals"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -10189,6 +10644,7 @@
         "strength-training"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -10248,6 +10704,7 @@
         "self-improvement"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 2,
       "headings": [
@@ -10317,6 +10774,7 @@
         "self-care"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -10381,6 +10839,7 @@
         "wellness"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -10440,6 +10899,7 @@
         "circadian"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -10512,6 +10972,7 @@
         "editorial-strategy"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 23,
       "headings": [
@@ -10833,6 +11294,7 @@
         "shop-restaurant"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 25,
       "headings": [
@@ -11020,6 +11482,7 @@
         "link-building"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 18,
       "headings": [
@@ -11314,6 +11777,7 @@
         "music"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 9,
       "headings": [
@@ -11513,6 +11977,7 @@
         "fair-use"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 17,
       "headings": [
@@ -11757,6 +12222,7 @@
         "scheduling"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 12,
       "headings": [
@@ -11966,6 +12432,7 @@
         "bilibili"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 8,
       "headings": [
@@ -12215,6 +12682,7 @@
         "google"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -12279,6 +12747,7 @@
         "conversion"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -12344,6 +12813,7 @@
         "apple"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -12409,6 +12879,7 @@
         "android"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -12468,6 +12939,7 @@
         "react"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -12534,6 +13006,7 @@
         "any2pdf"
       ],
       "author": "lovstudio",
+      "authorUrl": "https://github.com/lovstudio",
       "version": "1.1.0",
       "readingTime": 9,
       "headings": [
@@ -12663,6 +13136,7 @@
         "forms"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 25,
       "headings": [
@@ -12778,6 +13252,7 @@
         "conversion"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 14,
       "headings": [
@@ -12942,6 +13417,7 @@
         "business-reports"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 18,
       "headings": [
@@ -13096,6 +13572,7 @@
         "pdf"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 15,
       "headings": [
@@ -13325,6 +13802,7 @@
         "analytics"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 13,
       "headings": [
@@ -13540,6 +14018,7 @@
         "presentations"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 10,
       "headings": [
@@ -13704,6 +14183,7 @@
         "automation"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 14,
       "headings": [
@@ -13863,6 +14343,7 @@
         "presentations"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 12,
       "headings": [
@@ -14135,6 +14616,7 @@
         "prioritization"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 16,
       "headings": [
@@ -14316,6 +14798,7 @@
         "research-synthesis"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 16,
       "headings": [
@@ -14506,6 +14989,7 @@
         "oauth2"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 15,
       "headings": [
@@ -14855,6 +15339,7 @@
         "stride"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 11,
       "headings": [
@@ -15169,6 +15654,7 @@
         "spending-insights"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 20,
       "headings": [
@@ -15355,6 +15841,7 @@
         "business-intelligence"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 5,
       "headings": [
@@ -15445,6 +15932,7 @@
         "restaurant-operations"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 4,
       "headings": [
@@ -15535,6 +16023,7 @@
         "food-cost"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 6,
       "headings": [
@@ -15630,6 +16119,7 @@
         "purchasing"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 5,
       "headings": [
@@ -15721,6 +16211,7 @@
         "hospitality"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 5,
       "headings": [
@@ -15812,6 +16303,7 @@
         "restaurant-marketing"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 6,
       "headings": [
@@ -15907,6 +16399,7 @@
         "restaurant-operations"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 5,
       "headings": [
@@ -16002,6 +16495,7 @@
         "capacity-optimization"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 6,
       "headings": [
@@ -16097,6 +16591,7 @@
         "delivery"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 3,
       "headings": [
@@ -16231,6 +16726,7 @@
         "inclusive"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -16295,6 +16791,7 @@
         "contract-testing"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -16354,6 +16851,7 @@
         "automation"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -16413,6 +16911,7 @@
         "locust"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -16462,6 +16961,7 @@
         "automation"
       ],
       "author": "cosmicstack-labs",
+      "authorUrl": "https://github.com/cosmicstack-labs",
       "version": "1.0.0",
       "readingTime": 1,
       "headings": [
@@ -16515,7 +17015,7 @@
     {
       "slug": "automation",
       "name": "Automation",
-      "count": 5
+      "count": 6
     },
     {
       "slug": "backend",
@@ -16525,7 +17025,7 @@
     {
       "slug": "business",
       "name": "Business",
-      "count": 2
+      "count": 4
     },
     {
       "slug": "career",
@@ -16623,5 +17123,5 @@
       "count": 5
     }
   ],
-  "generatedAt": "2026-06-01T12:15:01.879Z"
+  "generatedAt": "2026-06-07T04:15:24.780Z"
 }

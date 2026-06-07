@@ -117,9 +117,20 @@ export default async function SkillPage({
               <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-[color:var(--color-fg-subtle)]">
                 {skill.version && <span>v{skill.version}</span>}
                 {skill.author && (
-                  <span className="inline-flex items-center gap-1">
-                    <User className="w-3 h-3" /> {skill.author}
-                  </span>
+                  skill.authorUrl ? (
+                    <a
+                      href={skill.authorUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1 hover:text-[color:var(--color-fg-muted)] transition-colors"
+                    >
+                      <User className="w-3 h-3" /> {skill.author}
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-1">
+                      <User className="w-3 h-3" /> {skill.author}
+                    </span>
+                  )
                 )}
               </div>
             )}

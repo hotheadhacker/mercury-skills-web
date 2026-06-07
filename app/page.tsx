@@ -99,9 +99,13 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Recently added */}
+      {/* Newly Added */}
       <section className="mx-auto max-w-6xl px-6 py-16 border-t border-[color:var(--color-border)]">
-        <SectionHeader title="Recently added" subtitle="The newest skills synced from main." />
+        <SectionHeader
+          icon={<Sparkles className="w-4 h-4" />}
+          title="Newly added"
+          subtitle="The latest skills added to the registry."
+        />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
           {recent.map((s) => (
             <SkillCard key={s.id} skill={s} stats={statsMap[s.id]} />

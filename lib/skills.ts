@@ -11,6 +11,7 @@ export interface SkillIndexEntry {
   description: string;
   tags: string[];
   author?: string;
+  authorUrl?: string;
   version?: string;
   icon?: string;
   readingTime: number;
